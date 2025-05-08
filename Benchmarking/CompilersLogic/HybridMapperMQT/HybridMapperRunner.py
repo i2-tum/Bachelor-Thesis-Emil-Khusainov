@@ -1,5 +1,5 @@
-from qiskit import QuantumCircuit
-from mqt.qmap.pyqmap import  NeutralAtomHybridArchitecture, HybridMapperParameters, HybridNAMapper
+from qiskit import QuantumCircuit, qasm2
+from mqt.qmap.pyqmap import NeutralAtomHybridArchitecture, HybridMapperParameters, HybridNAMapper
 from mqt.core.plugins.qiskit import qiskit_to_mqt
 import re
 import os, sys
@@ -67,8 +67,15 @@ def run(path_circuit, path_architecture):
     mapper.save_mapped_qc("mapped_qc")
     mapper.save_mapped_qc_aod("mapper_qc_aod")
 
-    #for Calculate new GateCount
-    #qc = QuantumCircuit.from_qasm_file("mapped_qc")
+    #for GateCount
+    with open("mapped_qc", "r") as f:
+        lines = f.readlines()
+    filtered = [l for l in lines if not l.strip().startswith("move")]
+    with open("filtered.qasm", "w") as f:
+        f.writelines(filtered)
+    gate_count = sum(qasm2.load("filtered.qasm").count_ops().values())
+    os.remove("filtered.qasm")
+
 
     #dict_keys(['totalExecutionTime', 'totalIdleTime', 'totalGateFidelities', 'totalFidelities', 'nCZs'])
     stats["totalPlannedExecutionTimeOfCircuit"] = schedule.get("totalExecutionTime")
@@ -79,8 +86,7 @@ def run(path_circuit, path_architecture):
 
     stats["CompilationTime"] = compile_time
 
-    #Not Implemented
-    #stats["GateCount"] = qc.num_ops
+    stats["GateCount"] = gate_count
 
 
     return stats
