@@ -1,7 +1,10 @@
-Versions
+Versions for venv in this directory or for that interpreter that will run main.py
 qiskit 2.0.0
 qmap 0.4.1
 qiskit-qasm3-import 0.5.1
 mqt 0.1.1
 mqt.qmap 3.0.0b2
 mqt-core 3.0.2
+
+
+To manipulate architecture and qasm files see absolute paths in main.py, it is possible to add your our change existing

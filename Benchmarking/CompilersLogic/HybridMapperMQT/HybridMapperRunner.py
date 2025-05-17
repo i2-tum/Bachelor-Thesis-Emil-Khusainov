@@ -4,25 +4,27 @@ from mqt.core.plugins.qiskit import qiskit_to_mqt
 import re
 import os, sys
 import time
+from pathlib import Path
 
 stats: dict[str, float] = {}
-def run(path_circuit, path_architecture):
+def run(path_circuit, path_architecture, parameters):
+    fileName = Path(path_circuit).stem
     compile_time = 0.0
     time_start = time.time()
     arch = NeutralAtomHybridArchitecture(path_architecture)
     params = HybridMapperParameters(
-        lookahead_weight_swaps=0.1,
-        lookahead_weight_moves=0.1,
-        decay=0.1,
-        shuttling_time_weight=1,
-        gate_weight=0,  # 0 only shuttling
-        shuttling_weight=1)  # 0 only swaps
+        lookahead_weight_swaps = parameters["lookahead_weight_swaps"],
+        lookahead_weight_moves = parameters["lookahead_weight_moves"],
+        decay = parameters["decay"],
+        shuttling_time_weight = parameters["shuttling_time_weight"],
+        gate_weight = parameters["gate_weight"],  # 0 only shuttling
+        shuttling_weight = parameters["shuttling_weight"])  # 0 only swaps
     mapper = HybridNAMapper(arch, params)
     compile_time = compile_time + (time.time() - time_start)
 
     qc = QuantumCircuit.from_qasm_file(path_circuit)
 
-    #redirection of verbose mapping result
+    #redirection of verbose mapping result (chossing between SWAP and shuttling) to extract statistic that printed from C lib
     r_fd, w_fd = os.pipe()
     orig_stdout_fd = sys.stdout.fileno()
     saved_stdout_fd = os.dup(orig_stdout_fd)
@@ -51,24 +53,26 @@ def run(path_circuit, path_architecture):
 
         #print(output)
 
+    #schedule to get fidelity and time
     result = mapper.get_mapped_qc()
     time_start = time.time()
     schedule = mapper.schedule(verbose=False, create_animation_csv=True)
     compile_time = compile_time + (time.time() - time_start)
 
-    #for debug
+    #for debug, maybe usefull later
     # print(result)
     #result = mapper.get_mapped_qc_aod()
     # print(result)
     #result = mapper.get_init_hw_pos()
     # print(result)
 
-    mapper.save_animation_csv("animation.csv")
-    mapper.save_mapped_qc("mapped_qc")
-    mapper.save_mapped_qc_aod("mapper_qc_aod")
+    mapper.save_animation_csv(f"CompilersLogic/HybridMapperMQT/results/{fileName}_animation.csv")
+    mapped_qc_path = f"CompilersLogic/HybridMapperMQT/results/{fileName}_mapped_qc"
+    mapper.save_mapped_qc(mapped_qc_path)
+    mapper.save_mapped_qc_aod(f"CompilersLogic/HybridMapperMQT/results/{fileName}_mapper_qc_aod")
 
     #for GateCount
-    with open("mapped_qc", "r") as f:
+    with open(mapped_qc_path, "r") as f:
         lines = f.readlines()
     filtered = [l for l in lines if not l.strip().startswith("move")]
     with open("filtered.qasm", "w") as f:
@@ -76,8 +80,6 @@ def run(path_circuit, path_architecture):
     gate_count = sum(qasm2.load("filtered.qasm").count_ops().values())
     os.remove("filtered.qasm")
 
-
-    #dict_keys(['totalExecutionTime', 'totalIdleTime', 'totalGateFidelities', 'totalFidelities', 'nCZs'])
     stats["totalPlannedExecutionTimeOfCircuit"] = schedule.get("totalExecutionTime")
     stats["totalPlannedIdleTimeOfCircuit"] = schedule.get("totalIdleTime")
     stats["totalPlannedGateFidelitiesOfCircuit"] = schedule.get("totalGateFidelities")
@@ -87,6 +89,5 @@ def run(path_circuit, path_architecture):
     stats["CompilationTime"] = compile_time
 
     stats["GateCount"] = gate_count
-
 
     return stats

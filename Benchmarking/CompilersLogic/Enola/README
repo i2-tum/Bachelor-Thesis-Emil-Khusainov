@@ -1,0 +1,4 @@
+Install in a new virtual environment in this folder and change VENV_NAME in EnolaRunner.py for your new environment
+qiskit-1.1.0  only this version
+matplotlib
+networkx
