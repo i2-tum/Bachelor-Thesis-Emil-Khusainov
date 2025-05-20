@@ -9,4 +9,5 @@ mqt-core 3.0.2
 
 To manipulate architecture and qasm files see absolute paths in main.py, it is possible to add your our change existing
 
-DO NOT forget to close ENOLA submodule in CompilerLogix/Enola/Enola
+DO NOT forget to clone ENOLA submodule in CompilerLogix/Enola/Enola
+DO NOT forget to clone Parallax submodule in CompilerLogix/Parallax/Parallax

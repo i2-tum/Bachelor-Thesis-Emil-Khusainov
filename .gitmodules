@@ -1,3 +1,6 @@
 [submodule "Benchmarking/CompilersLogic/Enola/Enola"]
 	path = Benchmarking/CompilersLogic/Enola/Enola
 	url = https://github.com/UCLA-VAST/Enola.git
+[submodule "Benchmarking/CompilersLogic/Parallax/Parallax"]
+	path = Benchmarking/CompilersLogic/Parallax/Parallax
+	url = https://github.com/positivetechnologylab/Parallax.git
