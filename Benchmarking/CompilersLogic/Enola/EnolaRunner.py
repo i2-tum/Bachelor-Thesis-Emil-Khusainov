@@ -28,8 +28,7 @@ def run(path_circuit_abs, parameters):
         command.append("--window")
     if parameters["full_code"]:
         command.append("--full_code")
-    subprocess.run(command,stdout=subprocess.DEVNULL,
-    stderr=subprocess.PIPE, check=True, cwd= cwd)
+    subprocess.run(command,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE, check=True, cwd= cwd)
 
     #getting fidelity by adding hardware architecture
     path = Path(f"results\\code\\{fileName}_code_full.json").as_posix()
@@ -67,6 +66,17 @@ print(sum(transpile(qc, basis_gates=['cz','rx','ry','rz','h','t']).count_ops().v
         stderr=subprocess.PIPE,
         text=True,
         check=True
+    )
+
+    cmd = [
+        enola_py,
+        "animation.py", "-h"
+    ]
+    result2 = subprocess.run(
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=True, cwd=cwd
     )
 
     return fidelityDict | timeDict | {"GateCount" : int(result.stdout.strip())}

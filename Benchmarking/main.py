@@ -1,14 +1,13 @@
 import CompilersLogic.HybridMapperMQT.HybridMapperRunner as HybridMapper
 import CompilersLogic.Enola.EnolaRunner as EnolaRunner
-import CompilersLogic.Parallax.ParallaxRunner as ParallaxRunner
 import os
 
 CURRENT_QASM = r"CircuitsQASM/dj_nativegates_rigetti_qiskit_opt3_10.qasm"
 if __name__ == '__main__':
      abs_path = os.path.abspath(CURRENT_QASM)
-     hybridMapper = True
+     hybridMapper = False
      enola = True
-     parallax = True
+     parallax = False
 
      if hybridMapper:
         result = HybridMapper.run(CURRENT_QASM,
@@ -30,7 +29,7 @@ if __name__ == '__main__':
      if enola:
             #takes longer than HybridMapper
         result = EnolaRunner.run(abs_path, {
-         "arcitecture" : 8,  # means physical 8x8 grid
+         "arcitecture" : 16,  # means physical 8x8 grid
          "routing_strategy" : "maximalis_sort", # "mis" , "maximalis", "maximalis_sort"
          "trivial_layout": False,  # if true then  logical and physical qubits will be associated 1 to 1
          "returning_to_initial": False,  #after each gate will return qubits to start state
@@ -47,5 +46,4 @@ if __name__ == '__main__':
         # 'average_movement': 42.97993063803415, 'list_movement_duration': [26.967994498529684, 83.12094145936335, 33.028912953790815, 26.967994498529684, 46.70993664969137, 63.245553203367585, 19.069251784911845, 26.967994498529684, 26.967994498529684, 63.245553203367585, 33.028912953790815, 26.967994498529684, 46.70993664969137, 83.12094145936335, 19.069251784911845, 26.967994498529684, 26.967994498529684, 76.27700713964738, 33.028912953790815, 26.967994498529684, 46.70993664969137, 89.44271909999159, 19.069251784911845, 26.967994498529684, 26.967994498529684, 89.44271909999159, 33.028912953790815, 26.967994498529684, 46.70993664969137, 76.27700713964738, 19.069251784911845, 26.967994498529684, 26.967994498529684, 89.44271909999159, 33.028912953790815, 26.967994498529684, 46.70993664969137, 76.27700713964738, 19.069251784911845, 26.967994498529684, 26.967994498529684, 89.44271909999159, 33.028912953790815, 26.967994498529684, 46.70993664969137, 83.12094145936335, 19.069251784911845, 26.967994498529684, 26.967994498529684, 83.12094145936335, 33.028912953790815, 26.967994498529684, 46.70993664969137, 89.44271909999159, 19.069251784911845, 26.967994498529684, 26.967994498529684, 76.27700713964738, 33.028912953790815, 26.967994498529684, 46.70993664969137, 89.44271909999159, 19.069251784911845, 26.967994498529684, 26.967994498529684, 97.23448696087954, 33.028912953790815, 26.967994498529684],
         # 'scheduling': 0.0, 'placement': 93.4866361618042, 'routing': 0.002262592315673828, 'codegen': 0.005128622055053711,
         # 'total': 93.49402737617493, 'GateCount': 59}
-     if parallax:
-        ParallaxRunner.run()
+
