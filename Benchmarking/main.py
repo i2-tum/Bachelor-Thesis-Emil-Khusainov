@@ -1,13 +1,18 @@
+from qiskit import QuantumCircuit, transpile
+
 import CompilersLogic.HybridMapperMQT.HybridMapperRunner as HybridMapper
 import CompilersLogic.Enola.EnolaRunner as EnolaRunner
+import CompilersLogic.DasAtom.DasAtomRunner as DasAtomRunner
+import CompilersLogic.Atomique.AtomiqueRunner as AtomiqueRunner
 import os
 
 CURRENT_QASM = r"CircuitsQASM/dj_nativegates_rigetti_qiskit_opt3_10.qasm"
 if __name__ == '__main__':
      abs_path = os.path.abspath(CURRENT_QASM)
+
      hybridMapper = False
-     enola = True
-     parallax = False
+     enola = False
+     dasAtom = True
 
      if hybridMapper:
         result = HybridMapper.run(CURRENT_QASM,
@@ -47,3 +52,7 @@ if __name__ == '__main__':
         # 'scheduling': 0.0, 'placement': 93.4866361618042, 'routing': 0.002262592315673828, 'codegen': 0.005128622055053711,
         # 'total': 93.49402737617493, 'GateCount': 59}
 
+     if dasAtom:
+
+
+         DasAtomRunner.run()
