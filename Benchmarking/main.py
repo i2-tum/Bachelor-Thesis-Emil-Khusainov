@@ -3,7 +3,7 @@ from qiskit import QuantumCircuit, transpile
 import CompilersLogic.HybridMapperMQT.HybridMapperRunner as HybridMapper
 import CompilersLogic.Enola.EnolaRunner as EnolaRunner
 import CompilersLogic.DasAtom.DasAtomRunner as DasAtomRunner
-#import CompilersLogic.Atomique.AtomiqueRunner as AtomiqueRunner
+import CompilersLogic.Atomique.AtomiqueRunner as AtomiqueRunner
 import os
 
 CURRENT_QASM = r"CircuitsQASM/dj_nativegates_rigetti_qiskit_opt3_10.qasm"
@@ -14,7 +14,8 @@ if __name__ == '__main__':
 
      hybridMapper = False
      enola = False
-     dasAtom = True
+     dasAtom = False
+     atomique = True
 
      if hybridMapper:
         result = HybridMapper.run(CURRENT_QASM,
@@ -72,3 +73,7 @@ if __name__ == '__main__':
          # 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 9,
          # 'Num Partitions': 1, 'Elapsed Time (s)': 0.03343391418457031, 'Total_T (from fidelity calc)': 2.6999999999999997,
          # 'Idle Time': 24.299999999999997}
+
+     if atomique:
+        result = AtomiqueRunner.run()
+        print(f"Atomique results: {result}")
