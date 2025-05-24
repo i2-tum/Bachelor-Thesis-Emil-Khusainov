@@ -6,7 +6,7 @@ import warnings
 from Enola.route import QuantumRouter
 from DasAtom_fun import *
 import argparse
-
+import json
 class SingleFileProcessor:
     """
     A helper class responsible for processing a single QASM file. This class:
@@ -463,7 +463,7 @@ class DasAtom:
         # Process each specified file
         for idx in file_indices:
             qasm_file = self.qasm_files[idx]
-            print(f"Processing: {qasm_file}")
+            #print(f"Processing: {qasm_file}")
 
             processor = SingleFileProcessor(
                 qasm_filename=qasm_file,
@@ -482,6 +482,26 @@ class DasAtom:
 
             # Returns one row of aggregated stats
             row_data = processor.process_qasm_file()
+            result_dict = {
+                'QASM File': row_data[0],
+                'Num Qubits': row_data[1],
+                'Num CZ Gates': row_data[2],
+                'Circuit Depth': row_data[3],
+                'Fidelity': row_data[4],
+                'Movement Fidelity': row_data[5],
+                'Num Movement Ops': row_data[6],
+                'Num Transferred Qubits': row_data[7],
+                'Num Moves': row_data[8],
+                'Total Move Distance': row_data[9],
+                'Num Gate Cycles': row_data[10],
+                'Num Partitions': row_data[11],
+                'Elapsed Time (s)': row_data[12],
+                'Total_T (from fidelity calc)': row_data[13],
+                'Idle Time': row_data[14],
+
+            }
+            print(json.dumps(result_dict))
+            return
             self.master_sheet.append(row_data)
 
         # Optionally append global parameters at the bottom
@@ -516,8 +536,19 @@ if __name__ == "__main__":
     parser.add_argument("--no_save_circuit_results", action="store_false", dest="save_circuit_results", help="Do not save circuit-level logs.")
     parser.add_argument("--save_benchmark_results", action="store_true", default=True, help="Save summary XLSX at benchmark-level (default=True).")
     parser.add_argument("--no_save_benchmark_results", action="store_false", dest="save_benchmark_results", help="Do not save summary XLSX.")
+    parser.add_argument("--tcz", type=float, default=0.2, help="exporting inter T_cz parameter")
+    parser.add_argument("--teff", type=float, default=1.5e6, help="exporting inter T_eff parameter")
+    parser.add_argument("--ttrans", type=int, default=20, help="exporting inter T_trans parameter")
+    parser.add_argument("--aodwidth", type=int, default=3, help="exporting inter AOD_width parameter")
+    parser.add_argument("--aodheight", type=int, default=3, help="exporting inter AOD_height parameter")
+    parser.add_argument("--movespeed", type=float, default=0.55, help="exporting inter Move_speed parameter")
+    parser.add_argument("--fcz", type=float, default=0.995, help="exporting inter F_cz parameter")
+    parser.add_argument("--ftrans", type=float, default=1.0, help="exporting inter F_trans parameter")
 
     args = parser.parse_args()
+
+    set_parameters(T_cz=args.tcz, T_eff=args.teff, T_trans=args.ttrans, AOD_width=args.aodwidth, AOD_height=args.aodheight, Move_speed=args.movespeed, F_cz=args.fcz,
+                   F_trans=args.ftrans)
 
     das_atom = DasAtom(
         benchmark_name=args.benchmark_name,

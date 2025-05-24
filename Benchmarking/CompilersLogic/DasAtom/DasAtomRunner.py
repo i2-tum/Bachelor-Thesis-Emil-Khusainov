@@ -1,19 +1,42 @@
 import os
 import subprocess
 import sys
-
+import json
+import shutil
 VENV_NAME = "venv_DasAtom"
 
-def run():
+def run(abs_path, params):
     current_file = os.path.abspath(__file__)
     current_dir = os.path.dirname(current_file)
     python = os.path.join(current_dir, VENV_NAME, "Scripts", "python")
     cwd = os.path.join(current_dir, "DasAtom")
 
-    # mapping, codegen andd etc
-    command = [python, "DasAtom.py", "dj_nativegates_rigetti_qiskit_opt3_10.qasm",
-        r"C:\Users\khusa\Documents\Bachelorthesis\Bachelor-Thesis-Emil-Khusainov\Benchmarking\CircuitsQASM"
+    temp_dir = os.path.join(cwd, "tempDir")
+    if os.path.isdir(temp_dir):
+        shutil.rmtree(temp_dir)
+    if not os.path.isdir(temp_dir):
+        os.makedirs(temp_dir)
+
+    dst_file = os.path.join(temp_dir, os.path.basename(abs_path))
+    shutil.copy2(abs_path, dst_file)
+    command = [python, "DasAtom.py", "BENCH",
+        "tempDir",
+        "--interaction_radius", params["interaction_radius"],
+        "--tcz", params["T_cz"],
+        "--teff", params["T_eff"],
+        "--ttrans", params["T_trans"],
+        "--aodwidth", params["AOD_width"],
+        "--aodheight", params["AOD_height"],
+        "--movespeed", params["Move_speed"],
+        "--fcz", params["F_cz"],
+        "--ftrans", params["F_trans"]
                ]
-    proc = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True, check=True, cwd=cwd)
-    print(proc.stdout)
-    return ""
+    result = "Error"
+    proc = None
+    try:
+        proc = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True, cwd=cwd)
+        output = proc.stdout.strip()
+        result = json.loads(output)
+    except Exception as e:
+        print(proc.stderr)
+    return result

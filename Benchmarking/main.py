@@ -3,10 +3,12 @@ from qiskit import QuantumCircuit, transpile
 import CompilersLogic.HybridMapperMQT.HybridMapperRunner as HybridMapper
 import CompilersLogic.Enola.EnolaRunner as EnolaRunner
 import CompilersLogic.DasAtom.DasAtomRunner as DasAtomRunner
-import CompilersLogic.Atomique.AtomiqueRunner as AtomiqueRunner
+#import CompilersLogic.Atomique.AtomiqueRunner as AtomiqueRunner
 import os
 
 CURRENT_QASM = r"CircuitsQASM/dj_nativegates_rigetti_qiskit_opt3_10.qasm"
+#CURRENT_QASM = r"CircuitsQASM/3_17_13.qasm"
+#CURRENT_QASM = r"CircuitsQASM/rd53_130.qasm"
 if __name__ == '__main__':
      abs_path = os.path.abspath(CURRENT_QASM)
 
@@ -34,7 +36,7 @@ if __name__ == '__main__':
      if enola:
             #takes longer than HybridMapper
         result = EnolaRunner.run(abs_path, {
-         "arcitecture" : 16,  # means physical 8x8 grid
+         "arcitecture" : 8,  # means physical 8x8 grid
          "routing_strategy" : "maximalis_sort", # "mis" , "maximalis", "maximalis_sort"
          "trivial_layout": False,  # if true then  logical and physical qubits will be associated 1 to 1
          "returning_to_initial": False,  #after each gate will return qubits to start state
@@ -53,6 +55,20 @@ if __name__ == '__main__':
         # 'total': 93.49402737617493, 'GateCount': 59}
 
      if dasAtom:
-
-
-         DasAtomRunner.run()
+         result = DasAtomRunner.run(abs_path, {
+            "interaction_radius": "1",
+            "T_cz": "0.3",
+            "T_eff": "1.4e6",
+            "T_trans": "10",
+            "AOD_width": "4",
+            "AOD_height": "4",
+            "Move_speed": "0.65",
+            "F_cz": "0.895",
+            "F_trans": "0.9"
+            })
+         print(f"DasAtom results: {result}")
+         #Example output: DasAtom results: {'QASM File': 'dj_nativegates_rigetti_qiskit_opt3_10.qasm', 'Num Qubits': 10,
+         # 'Num CZ Gates': 9, 'Circuit Depth': 9, 'Fidelity': 0.36846800226594456, 'Movement Fidelity': 1.0,
+         # 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 9,
+         # 'Num Partitions': 1, 'Elapsed Time (s)': 0.03343391418457031, 'Total_T (from fidelity calc)': 2.6999999999999997,
+         # 'Idle Time': 24.299999999999997}

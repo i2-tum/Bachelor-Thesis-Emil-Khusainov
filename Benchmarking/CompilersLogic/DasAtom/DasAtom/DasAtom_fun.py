@@ -17,6 +17,8 @@ custom = [
     qasm2.CustomInstruction("p",num_params= 1, num_qubits=1 ,constructor=library.PhaseGate, builtin=True),
 ]
 
+parameters = {}
+
 def CreateCircuitFromQASM(file, path):
     filePath = os.path.join(path,file)
     # print(filePath)
@@ -319,6 +321,9 @@ def get_parallel_gates(gates, coupling_graph, mapping, r_re):
     return para'''
 
 def set_parameters(T_cz = 0.2, T_eff = 1.5e6, T_trans=20, AOD_width=3,AOD_height=3,Move_speed=0.55,F_cz=0.995, F_trans = 1):
+    global parameters
+    if parameters != {}:
+        return parameters
     para = {}
     para['T_cz'] = T_cz  #us
     para['T_eff'] = T_eff #us
@@ -328,6 +333,7 @@ def set_parameters(T_cz = 0.2, T_eff = 1.5e6, T_trans=20, AOD_width=3,AOD_height
     para['Move_speed'] = Move_speed #um/us
     para['F_cz'] = F_cz
     para['F_trans'] = F_trans
+    parameters = para
     return para
 
 '''def compute_fidelity(parallel_gates, all_movements, num_q, gate_num):
