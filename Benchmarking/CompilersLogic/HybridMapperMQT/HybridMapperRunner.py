@@ -1,10 +1,11 @@
-from qiskit import QuantumCircuit, qasm2
+from qiskit import QuantumCircuit, qasm2, transpile
 from mqt.qmap.pyqmap import NeutralAtomHybridArchitecture, HybridMapperParameters, HybridNAMapper
 from mqt.core.plugins.qiskit import qiskit_to_mqt
 import re
 import os, sys
 import time
 from pathlib import Path
+import json
 
 stats: dict[str, float] = {}
 def run(path_circuit, path_architecture, parameters):
@@ -22,8 +23,11 @@ def run(path_circuit, path_architecture, parameters):
     mapper = HybridNAMapper(arch, params)
     compile_time = compile_time + (time.time() - time_start)
 
+    with open(path_architecture, 'r', encoding='utf-8') as f:
+        basisGates = json.load(f)["parameters"]["gateAverageFidelities"].keys()
     qc = QuantumCircuit.from_qasm_file(path_circuit)
 
+    qc = transpile(qc, basis_gates=basisGates)
     #redirection of verbose mapping result (chossing between SWAP and shuttling) to extract statistic that printed from C lib
     r_fd, w_fd = os.pipe()
     orig_stdout_fd = sys.stdout.fileno()

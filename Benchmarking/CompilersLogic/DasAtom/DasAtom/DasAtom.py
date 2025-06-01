@@ -7,6 +7,8 @@ from Enola.route import QuantumRouter
 from DasAtom_fun import *
 import argparse
 import json
+
+resultingList = {}
 class SingleFileProcessor:
     """
     A helper class responsible for processing a single QASM file. This class:
@@ -80,8 +82,15 @@ class SingleFileProcessor:
         ws = wb.active
         start_time = time.time()
         # 1) Create circuit from QASM, then extract 2-qubit gates and DAG
+        # here transpiled into {'cz', 'h', 's', 't', 'rx', 'ry', 'rz'}
         qasm_circuit = CreateCircuitFromQASM(self.qasm_filename, self.circuit_folder)
-        two_qubit_gates_list = get_2q_gates_list(qasm_circuit)
+
+        #Calculate for Gate Count for my Thesis
+        gate_count = sum(qasm_circuit.count_ops().values())
+        global resultingList
+        resultingList = resultingList | {"GateCount" : gate_count}
+
+        two_qubit_gates_list = get_2q_gates_list(qasm_circuit) #all 2qubit qubits (only cz)
         assert two_qubit_gates_list, f"a wrong circuit which have no cz in {self.qasm_filename}"
         qc_object, dag_object = gates_list_to_QC(two_qubit_gates_list)
 
@@ -114,11 +123,13 @@ class SingleFileProcessor:
 
         # 7) Compute fidelity/time metrics
         total_time_now = time.time()
-        idle_time, fidelity, move_fidelity, total_runtime, num_transfers, num_moves, total_move_distance = compute_fidelity(
+        idle_time, fidelity, move_fidelity, total_runtime, num_transfers, num_moves, total_move_distance, fidelity1Q, fidelityCoherence = compute_fidelity(
             merged_parallel_gates,
             movements_list,
             num_qubits,
-            num_cz_gates
+            num_cz_gates,
+            None,
+            (gate_count - num_cz_gates)
         )
 
         # 8) Log final stats for this file
@@ -161,7 +172,9 @@ class SingleFileProcessor:
             len(embeddings),
             (total_time_now - start_time),
             total_runtime,
-            idle_time
+            idle_time,
+            fidelity1Q,
+            fidelityCoherence
         ]
 
     def _compute_architecture_parameters(self, two_qubit_gates_list):
@@ -498,8 +511,11 @@ class DasAtom:
                 'Elapsed Time (s)': row_data[12],
                 'Total_T (from fidelity calc)': row_data[13],
                 'Idle Time': row_data[14],
-
+                'FidelityWith1Q': row_data[15],
+                'FidelityCoherence': row_data[16],
             }
+            global resultingList
+            result_dict = result_dict | resultingList
             print(json.dumps(result_dict))
             return
             self.master_sheet.append(row_data)
@@ -538,17 +554,18 @@ if __name__ == "__main__":
     parser.add_argument("--no_save_benchmark_results", action="store_false", dest="save_benchmark_results", help="Do not save summary XLSX.")
     parser.add_argument("--tcz", type=float, default=0.2, help="exporting inter T_cz parameter")
     parser.add_argument("--teff", type=float, default=1.5e6, help="exporting inter T_eff parameter")
-    parser.add_argument("--ttrans", type=int, default=20, help="exporting inter T_trans parameter")
+    parser.add_argument("--ttrans", type=float, default=20, help="exporting inter T_trans parameter")
     parser.add_argument("--aodwidth", type=int, default=3, help="exporting inter AOD_width parameter")
     parser.add_argument("--aodheight", type=int, default=3, help="exporting inter AOD_height parameter")
     parser.add_argument("--movespeed", type=float, default=0.55, help="exporting inter Move_speed parameter")
     parser.add_argument("--fcz", type=float, default=0.995, help="exporting inter F_cz parameter")
     parser.add_argument("--ftrans", type=float, default=1.0, help="exporting inter F_trans parameter")
+    parser.add_argument("--f1q", type=float, default=1.0, help="my own F_1Q parameter")
 
     args = parser.parse_args()
 
     set_parameters(T_cz=args.tcz, T_eff=args.teff, T_trans=args.ttrans, AOD_width=args.aodwidth, AOD_height=args.aodheight, Move_speed=args.movespeed, F_cz=args.fcz,
-                   F_trans=args.ftrans)
+                   F_trans=args.ftrans, F_1Q=args.f1q)
 
     das_atom = DasAtom(
         benchmark_name=args.benchmark_name,

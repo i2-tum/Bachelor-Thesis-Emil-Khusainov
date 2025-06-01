@@ -3,6 +3,8 @@ import subprocess
 import sys
 import json
 import shutil
+import time
+
 VENV_NAME = "venv_DasAtom"
 
 def run(abs_path, params):
@@ -29,14 +31,17 @@ def run(abs_path, params):
         "--aodheight", params["AOD_height"],
         "--movespeed", params["Move_speed"],
         "--fcz", params["F_cz"],
-        "--ftrans", params["F_trans"]
+        "--ftrans", params["F_trans"],
+        "--f1q", params["F_1Q"]
                ]
     result = "Error"
+    time_start = time.time()
     proc = None
     try:
+        time_start = time.time()
         proc = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True, cwd=cwd)
         output = proc.stdout.strip()
         result = json.loads(output)
     except Exception as e:
         print(proc.stderr)
-    return result
+    return result | {"CompileTime" : (time.time() - time_start)}

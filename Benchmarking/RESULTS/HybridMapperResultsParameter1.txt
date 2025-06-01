@@ -1,0 +1,64 @@
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_2.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 1.7999999999999998, 'totalPlannedIdleTimeOfCircuit': 357.8399999999999, 'totalPlannedGateFidelitiesOfCircuit': 0.9998000100000001, 'totalPlannedFidelitiesOfCircuit': 0.9995579493325327, 'totalnCZsOfCircuit': 2.0, 'CompilationTime': 0.004027843475341797, 'GateCount': 6}
+Fidelity: 0.9995579493325327
+TotalTime: 0.004027843475341797
+AllGateCount: 6
+CZGateCount: 2.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_3.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 3.959999999999999, 'totalPlannedIdleTimeOfCircuit': 786.2399999999998, 'totalPlannedGateFidelitiesOfCircuit': 0.9994001499800017, 'totalPlannedFidelitiesOfCircuit': 0.9988685881275933, 'totalnCZsOfCircuit': 6.0, 'CompilationTime': 0.003996849060058594, 'GateCount': 16}
+Fidelity: 0.9988685881275933
+TotalTime: 0.003996849060058594
+AllGateCount: 16
+CZGateCount: 6.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_4.qasm
+{'nSwaps': 0.0, 'nMoves': 4.0, 'nMoveGroups': 4.0, 'totalPlannedExecutionTimeOfCircuit': 384.3018181818183, 'totalPlannedIdleTimeOfCircuit': 76471.38181818185, 'totalPlannedGateFidelitiesOfCircuit': 0.9968049550435942, 'totalPlannedFidelitiesOfCircuit': 0.9465364535326468, 'totalnCZsOfCircuit': 12.0, 'CompilationTime': 0.008033037185668945, 'GateCount': 30}
+Fidelity: 0.9465364535326468
+TotalTime: 0.008033037185668945
+AllGateCount: 30
+CZGateCount: 12.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+ManualCorrection FAILURE
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_6.qasm
+{'nSwaps': 0.0, 'nMoves': 9.0, 'nMoveGroups': 9.0, 'totalPlannedExecutionTimeOfCircuit': 898.8654545454546, 'totalPlannedIdleTimeOfCircuit': 178853.34545454546, 'totalPlannedGateFidelitiesOfCircuit': 0.9925276825963737, 'totalPlannedFidelitiesOfCircuit': 0.8793920415711152, 'totalnCZsOfCircuit': 30.0, 'CompilationTime': 0.013112306594848633, 'GateCount': 70}
+Fidelity: 0.8793920415711152
+TotalTime: 0.013112306594848633
+AllGateCount: 70
+CZGateCount: 30.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_7.qasm
+{'nSwaps': 0.0, 'nMoves': 16.0, 'nMoveGroups': 15.0, 'totalPlannedExecutionTimeOfCircuit': 1606.1018181818172, 'totalPlannedIdleTimeOfCircuit': 319587.6218181816, 'totalPlannedGateFidelitiesOfCircuit': 0.9883676006096995, 'totalPlannedFidelitiesOfCircuit': 0.796160185114223, 'totalnCZsOfCircuit': 42.0, 'CompilationTime': 0.022083759307861328, 'GateCount': 96}
+Fidelity: 0.796160185114223
+TotalTime: 0.022083759307861328
+AllGateCount: 96
+CZGateCount: 42.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_8.qasm
+{'nSwaps': 0.0, 'nMoves': 26.0, 'nMoveGroups': 22.0, 'totalPlannedExecutionTimeOfCircuit': 2257.6763636363657, 'totalPlannedIdleTimeOfCircuit': 449246.27636363683, 'totalPlannedGateFidelitiesOfCircuit': 0.9835362043809335, 'totalPlannedFidelitiesOfCircuit': 0.7257201473831841, 'totalnCZsOfCircuit': 56.0, 'CompilationTime': 0.037683725357055664, 'GateCount': 126}
+Fidelity: 0.7257201473831841
+TotalTime: 0.037683725357055664
+AllGateCount: 126
+CZGateCount: 56.0
+------------------------------------------------------------
+

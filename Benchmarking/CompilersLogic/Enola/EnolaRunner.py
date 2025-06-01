@@ -28,7 +28,14 @@ def run(path_circuit_abs, parameters):
         command.append("--window")
     if parameters["full_code"]:
         command.append("--full_code")
-    subprocess.run(command,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE, check=True, cwd= cwd)
+
+    proc = None
+    try:
+        proc = subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.PIPE, check=True, cwd= cwd)
+        #output = proc.stdout
+    except Exception as e:
+        print(proc.stderr)
+        return {}
 
     #getting fidelity by adding hardware architecture
     path = Path(f"results\\code\\{fileName}_code_full.json").as_posix()
@@ -37,7 +44,14 @@ def run(path_circuit_abs, parameters):
                "--fidelity_param", parameters["hardware_fidelities"],
                 path
                ]
-    subprocess.run(command, check=True, cwd=cwd)
+
+    proc = None
+    try:
+        proc = subprocess.run(command, check=True, cwd=cwd)
+        #output = proc.stdout
+    except Exception as e:
+        print(proc.stderr)
+        return {}
 
     #collect statistic
     fidelityJson = os.path.join(cwd, "results", "fidelity", f"{fileName}_code_full_fidelity.json")
@@ -51,33 +65,53 @@ def run(path_circuit_abs, parameters):
     inline_code = r"""import sys
 import qiskit.qasm2
 import qiskit.circuit
+import json
 from qiskit import transpile, qasm2
 with open(sys.argv[1], 'r') as f:
     qc = qasm2.loads(f.read())
-print(sum(transpile(qc, basis_gates=['cz','rx','ry','rz','h','t']).count_ops().values()))"""
+transpiled = transpile(qc, basis_gates=['cz','rx','ry','rz','h','t'])
+sumAll = sum(transpiled.count_ops().values())
+CZNumber = transpiled.count_ops().get('cz', 0)
+dict = {"GateCount" : sumAll,
+"Num CZ Gates" : CZNumber}
+print(json.dumps(dict))"""
     cmd = [
         enola_py,
         "-c", inline_code,
         path_circuit_abs
     ]
-    result = subprocess.run(
-        cmd,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        check=True
-    )
+
+    result = ""
+    try:
+        result = subprocess.run(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        #output = proc.stdout
+    except Exception as e:
+        print(proc.stderr)
+        return {}
 
     cmd = [
         enola_py,
         "animation.py", "-h"
     ]
-    result2 = subprocess.run(
-        cmd,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=True, cwd=cwd
-    )
 
-    return fidelityDict | timeDict | {"GateCount" : int(result.stdout.strip())}
+    result2 = ""
+    try:
+        result2 = subprocess.run(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=True, cwd=cwd
+        )
+        #output = proc.stdout
+    except Exception as e:
+        print(proc.stderr)
+        return {}
+
+    return fidelityDict | timeDict | json.loads(result.stdout.strip())
 
