@@ -172,16 +172,16 @@ def fillLists(hybridMapperFile1, hybridMapperFile2, hybridMapperFile3, enolaFile
 def plotQFTAllGateCount():
     plt.figure()
 
-    xHybridMapper1 = range(2, len(AllGateCountListHybridMapper1) + 2)
-    yHybridMapper1 = AllGateCountListHybridMapper1
+    xHybridMapper1 = range(2, len(AllGateCountListHybridMapper1[:30]) + 2)
+    yHybridMapper1 = AllGateCountListHybridMapper1[:30]
     plt.plot(xHybridMapper1, yHybridMapper1, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperOnlyShuttling')
 
-    xHybridMapper2 = range(2, len(AllGateCountListHybridMapper2) + 2)
-    yHybridMapper2 = AllGateCountListHybridMapper2
+    xHybridMapper2 = range(2, len(AllGateCountListHybridMapper2[:30]) + 2)
+    yHybridMapper2 = AllGateCountListHybridMapper2[:30]
     plt.plot(xHybridMapper2, yHybridMapper2, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperMixed')
 
-    xHybridMapper3 = range(2, len(AllGateCountListHybridMapper3) + 2)
-    yHybridMapper3 = AllGateCountListHybridMapper3
+    xHybridMapper3 = range(2, len(AllGateCountListHybridMapper3[:30]) + 2)
+    yHybridMapper3 = AllGateCountListHybridMapper3[:30]
     plt.plot(xHybridMapper3, yHybridMapper3, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperOnlySwaps')
 
     xEnola = range(2, len(AllGateCountListEnola) + 2)
@@ -205,17 +205,17 @@ def plotQFTAllGateCount():
 def plotQFTCZGateCount():
     plt.figure()
 
-    xHybridMapper1 = range(2, len(CZGateCountListHybridMapper1) + 2)
-    yHybridMapper1 = CZGateCountListHybridMapper1
+    xHybridMapper1 = range(2, len(CZGateCountListHybridMapper1[:30]) + 2)
+    yHybridMapper1 = CZGateCountListHybridMapper1[:30]
     plt.plot(xHybridMapper1, yHybridMapper1, marker='o', markersize=1,linewidth=0.5, linestyle='-',
              label='HybridMapperOnlyShuttling')
 
-    xHybridMapper2 = range(2, len(CZGateCountListHybridMapper2) + 2)
-    yHybridMapper2 = CZGateCountListHybridMapper2
+    xHybridMapper2 = range(2, len(CZGateCountListHybridMapper2[:30]) + 2)
+    yHybridMapper2 = CZGateCountListHybridMapper2[:30]
     plt.plot(xHybridMapper2, yHybridMapper2, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperMixed')
 
-    xHybridMapper3 = range(2, len(CZGateCountListHybridMapper3) + 2)
-    yHybridMapper3 = CZGateCountListHybridMapper3
+    xHybridMapper3 = range(2, len(CZGateCountListHybridMapper3[:30]) + 2)
+    yHybridMapper3 = CZGateCountListHybridMapper3[:30]
     plt.plot(xHybridMapper3, yHybridMapper3, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperOnlySwaps')
 
     xEnola = range(2, len(CZGateCountListEnola) + 2)
@@ -239,17 +239,17 @@ def plotQFTCZGateCount():
 def plotQFTTotalTime():
     plt.figure()
 
-    xHybridMapper1 = range(2, len(TotalTimeListHybridMapper1) + 2)
-    yHybridMapper1 = TotalTimeListHybridMapper1
+    xHybridMapper1 = range(2, len(TotalTimeListHybridMapper1[:30]) + 2)
+    yHybridMapper1 = TotalTimeListHybridMapper1[:30]
     plt.plot(xHybridMapper1, yHybridMapper1, marker='o', markersize=1,linewidth=0.5, linestyle='-',
              label='HybridMapperOnlyShuttling')
 
-    xHybridMapper2 = range(2, len(TotalTimeListHybridMapper2) + 2)
-    yHybridMapper2 = TotalTimeListHybridMapper2
+    xHybridMapper2 = range(2, len(TotalTimeListHybridMapper2[:30]) + 2)
+    yHybridMapper2 = TotalTimeListHybridMapper2[:30]
     plt.plot(xHybridMapper2, yHybridMapper2, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperMixed')
 
-    xHybridMapper3 = range(2, len(TotalTimeListHybridMapper3) + 2)
-    yHybridMapper3 = TotalTimeListHybridMapper3
+    xHybridMapper3 = range(2, len(TotalTimeListHybridMapper3[:30]) + 2)
+    yHybridMapper3 = TotalTimeListHybridMapper3[:30]
     plt.plot(xHybridMapper3, yHybridMapper3, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperOnlySwaps')
 
     xEnola = range(2, len(TotalTimeListEnola) + 2)
@@ -272,17 +272,17 @@ def plotQFTTotalTime():
 def plotQFTFidelity():
     plt.figure()
 
-    xHybridMapper1 = range(2, len(FidelityListHybridMapper1) + 2)
-    yHybridMapper1 = FidelityListHybridMapper1
+    xHybridMapper1 = range(2, len(FidelityListHybridMapper1[:30]) + 2)
+    yHybridMapper1 = FidelityListHybridMapper1[:30]
     plt.plot(xHybridMapper1, yHybridMapper1, marker='o', markersize=1,linewidth=0.5, linestyle='-',
              label='HybridMapperOnlyShuttling')
 
-    xHybridMapper2 = range(2, len(FidelityListHybridMapper2) + 2)
-    yHybridMapper2 = FidelityListHybridMapper2
+    xHybridMapper2 = range(2, len(FidelityListHybridMapper2[:30]) + 2)
+    yHybridMapper2 = FidelityListHybridMapper2[:30]
     plt.plot(xHybridMapper2, yHybridMapper2, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperMixed')
 
-    xHybridMapper3 = range(2, len(FidelityListHybridMapper3) + 2)
-    yHybridMapper3 = FidelityListHybridMapper3
+    xHybridMapper3 = range(2, len(FidelityListHybridMapper3[:30]) + 2)
+    yHybridMapper3 = FidelityListHybridMapper3[:30]
     plt.plot(xHybridMapper3, yHybridMapper3, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='HybridMapperOnlySwaps')
 
     xEnola = range(2, len(FidelityListEnola) + 2)

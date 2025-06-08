@@ -14,12 +14,12 @@ import qiskit
 
 
 if __name__ == '__main__':
-     hybridMapper = False
-     enola = True
+     hybridMapper = True
+     enola = False
      dasAtom = False
      atomique = False
 
-     for i in range(14,131):
+     for i in range(9,131):
          CURRENT_QASM = f"CircuitsQASM/QFT/qft_indep_qiskit_{i}.qasm"
          abs_path = os.path.abspath(CURRENT_QASM)
          try:
@@ -75,6 +75,7 @@ if __name__ == '__main__':
                     f.write("CZGateCount: " + str(result["totalnCZsOfCircuit"]) + "\n")
                     f.write("------------------------------------------------------------\n\n")
             except Exception as e:
+                print(e)
                 with open("RESULTS/HybridMapperResultsParameter1.txt", "a") as f:
                     f.write(CURRENT_QASM + "FAILURE\n")
 
@@ -97,6 +98,7 @@ if __name__ == '__main__':
                     f.write("CZGateCount: " + str(result["totalnCZsOfCircuit"]) + "\n")
                     f.write("------------------------------------------------------------\n\n")
             except Exception as e:
+                print(e)
                 with open("RESULTS/HybridMapperResultsParameter2.txt", "a") as f:
                     f.write(CURRENT_QASM + "FAILURE\n")
 
@@ -123,6 +125,7 @@ if __name__ == '__main__':
                 # 'totalPlannedGateFidelitiesOfCircuit': 0.9137660866912318, 'totalPlannedFidelitiesOfCircuit': 0.9117281029480642,
                 # 'totalnCZsOfCircuit': 9.0, 'CompilationTime': 0.015889883041381836, 'GateCount': 45}
             except Exception as e:
+                print(e)
                 with open("RESULTS/HybridMapperResultsParameter3.txt", "a") as f:
                     f.write(CURRENT_QASM + "FAILURE\n")
 

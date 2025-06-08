@@ -7,8 +7,10 @@ import time
 from pathlib import Path
 import json
 
+
 stats: dict[str, float] = {}
 def run(path_circuit, path_architecture, parameters):
+    print()
     fileName = Path(path_circuit).stem
     compile_time = 0.0
     time_start = time.time()
@@ -37,7 +39,7 @@ def run(path_circuit, path_architecture, parameters):
     try:
         time_start = time.time()
         qc = qiskit_to_mqt(qc)
-        mapper.map(qc, verbose= True)
+        mapper.map(qc, verbose= False)
         compile_time = compile_time + (time.time() - time_start)
     finally:
 
@@ -60,7 +62,7 @@ def run(path_circuit, path_architecture, parameters):
     #schedule to get fidelity and time
     result = mapper.get_mapped_qc()
     time_start = time.time()
-    schedule = mapper.schedule(verbose=False, create_animation_csv=True)
+    schedule = mapper.schedule(verbose=False, create_animation_csv=False)
     compile_time = compile_time + (time.time() - time_start)
 
     #for debug, maybe usefull later
@@ -70,10 +72,10 @@ def run(path_circuit, path_architecture, parameters):
     #result = mapper.get_init_hw_pos()
     # print(result)
 
-    mapper.save_animation_csv(f"CompilersLogic/HybridMapperMQT/results/{fileName}_animation.csv")
+    #mapper.save_animation_csv(f"CompilersLogic/HybridMapperMQT/results/{fileName}_animation.csv")
     mapped_qc_path = f"CompilersLogic/HybridMapperMQT/results/{fileName}_mapped_qc"
     mapper.save_mapped_qc(mapped_qc_path)
-    mapper.save_mapped_qc_aod(f"CompilersLogic/HybridMapperMQT/results/{fileName}_mapper_qc_aod")
+    #mapper.save_mapped_qc_aod(f"CompilersLogic/HybridMapperMQT/results/{fileName}_mapper_qc_aod")
 
     #for GateCount
     with open(mapped_qc_path, "r") as f:
