@@ -1,3 +1,5 @@
+import math
+
 from animation import CodeGen, set_hardware_paramters
 import argparse
 import json
@@ -107,8 +109,10 @@ class Simulator():
             # print("                          cir_qubit_idle_time = {}".format(self.cir_qubit_idle_time))
             # input()
         # print(self.coherence_time)
+        coh = 1
         for t in self.cir_qubit_idle_time:
-            self.cir_fidelity_coherence *= (1 - t/self.coherence_time)
+            self.cir_fidelity_coherence *= math.exp((-1*t)/self.coherence_time)
+            #coh *= math.exp((-1*t)/self.coherence_time)
         self.cir_fidelity = self.cir_fidelity_1q_gate * self.cir_fidelity_2q_gate * self.cir_fidelity_2q_gate_for_idle \
                             * self.cir_fidelity_atom_transfer * self.cir_fidelity_coherence
         total_movement_time = sum(list_movement_duration)

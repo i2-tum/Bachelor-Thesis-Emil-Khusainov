@@ -123,7 +123,7 @@ class SingleFileProcessor:
 
         # 7) Compute fidelity/time metrics
         total_time_now = time.time()
-        idle_time, fidelity, move_fidelity, total_runtime, num_transfers, num_moves, total_move_distance, fidelity1Q, fidelityCoherence = compute_fidelity(
+        idle_time, fidelity, move_fidelity, total_runtime, num_transfers, num_moves, total_move_distance, fidelity1Q, fidelityCoherence, fidelity2Q = compute_fidelity(
             merged_parallel_gates,
             movements_list,
             num_qubits,
@@ -174,7 +174,8 @@ class SingleFileProcessor:
             total_runtime,
             idle_time,
             fidelity1Q,
-            fidelityCoherence
+            fidelityCoherence,
+            fidelity2Q
         ]
 
     def _compute_architecture_parameters(self, two_qubit_gates_list):
@@ -513,6 +514,7 @@ class DasAtom:
                 'Idle Time': row_data[14],
                 'FidelityWith1Q': row_data[15],
                 'FidelityCoherence': row_data[16],
+                'FidelityWith2Q': row_data[17]
             }
             global resultingList
             result_dict = result_dict | resultingList
@@ -555,6 +557,7 @@ if __name__ == "__main__":
     parser.add_argument("--tcz", type=float, default=0.2, help="exporting inter T_cz parameter")
     parser.add_argument("--teff", type=float, default=1.5e6, help="exporting inter T_eff parameter")
     parser.add_argument("--ttrans", type=float, default=20, help="exporting inter T_trans parameter")
+    parser.add_argument("--t1q", type=float, default=1.0, help="my own T_1Q parameter")
     parser.add_argument("--aodwidth", type=int, default=3, help="exporting inter AOD_width parameter")
     parser.add_argument("--aodheight", type=int, default=3, help="exporting inter AOD_height parameter")
     parser.add_argument("--movespeed", type=float, default=0.55, help="exporting inter Move_speed parameter")
@@ -565,7 +568,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     set_parameters(T_cz=args.tcz, T_eff=args.teff, T_trans=args.ttrans, AOD_width=args.aodwidth, AOD_height=args.aodheight, Move_speed=args.movespeed, F_cz=args.fcz,
-                   F_trans=args.ftrans, F_1Q=args.f1q)
+                   F_trans=args.ftrans, F_1Q=args.f1q, T_1Q=args.t1q)
 
     das_atom = DasAtom(
         benchmark_name=args.benchmark_name,

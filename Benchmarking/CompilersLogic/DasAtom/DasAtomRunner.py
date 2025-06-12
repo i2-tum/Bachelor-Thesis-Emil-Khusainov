@@ -27,6 +27,7 @@ def run(abs_path, params):
         "--tcz", params["T_cz"],
         "--teff", params["T_eff"],
         "--ttrans", params["T_trans"],
+        "--t1q", params["T_1Q"],
         "--aodwidth", params["AOD_width"],
         "--aodheight", params["AOD_height"],
         "--movespeed", params["Move_speed"],

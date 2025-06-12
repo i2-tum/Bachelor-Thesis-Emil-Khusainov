@@ -19,7 +19,7 @@ if __name__ == '__main__':
      dasAtom = False
      atomique = False
 
-     for i in range(9,131):
+     for i in range(2,31):
          CURRENT_QASM = f"CircuitsQASM/QFT/qft_indep_qiskit_{i}.qasm"
          abs_path = os.path.abspath(CURRENT_QASM)
          try:
@@ -32,6 +32,7 @@ if __name__ == '__main__':
          if hybridMapper:
             try:
                 Architecture1 = r"CompilersLogic\HybridMapperMQT\architectures\Architecture1.json"
+                Architecture2 = r"CompilersLogic\HybridMapperMQT\architectures\Architecture2.json"
                 params1 = {
                     "lookahead_weight_swaps": 0.0,
                     "lookahead_weight_moves": 0.0,
@@ -45,8 +46,8 @@ if __name__ == '__main__':
                     "lookahead_weight_moves": 1.0,
                     "decay": 0.99,
                     "shuttling_time_weight": 1,
-                    "gate_weight": 0.5,  # 0 only shuttling
-                    "shuttling_weight": 0.5,  # 0 only swaps
+                    "gate_weight": 0.7,  # 0 only shuttling
+                    "shuttling_weight": 0.3,  # 0 only swaps
                 }
                 params3 = {
                     "lookahead_weight_swaps": 0.0,
@@ -56,7 +57,7 @@ if __name__ == '__main__':
                     "gate_weight": 1,  # 0 only shuttling
                     "shuttling_weight": 0,  # 0 only swaps
                 }
-                arch = Architecture1
+                arch = Architecture2
                 params = params1
 
                 result = HybridMapper.run(CURRENT_QASM,
@@ -133,8 +134,8 @@ if __name__ == '__main__':
          if enola:
                 #takes much longer than HybridMapper
             try:
-                hardware_times = r"C:\Users\khusa\Documents\Bachelorthesis\Bachelor-Thesis-Emil-Khusainov\Benchmarking\CompilersLogic\Enola\architectures\Architecture1.json"
-                hardware_fidelities = r"C:\Users\khusa\Documents\Bachelorthesis\Bachelor-Thesis-Emil-Khusainov\Benchmarking\CompilersLogic\Enola\architectures\Architecture1_fidelity.json"
+                hardware_times = r"C:\Users\khusa\Documents\Bachelorthesis\Bachelor-Thesis-Emil-Khusainov\Benchmarking\CompilersLogic\Enola\architectures\Architecture2.json"
+                hardware_fidelities = r"C:\Users\khusa\Documents\Bachelorthesis\Bachelor-Thesis-Emil-Khusainov\Benchmarking\CompilersLogic\Enola\architectures\Architecture2_fidelity.json"
                 result = EnolaRunner.run(abs_path, {
                  "arcitecture" : 15,  # means physical 8x8 grid
                  "routing_strategy" : "maximalis_sort", # "mis" , "maximalis", "maximalis_sort"
@@ -162,6 +163,7 @@ if __name__ == '__main__':
                 with open("RESULTS/EnolaResults.txt", "a") as f:
                     f.write("------------------------------------------------------------\n")
                     f.write(CURRENT_QASM + "FAILURE\n")
+                    print(e)
                     f.write("------------------------------------------------------------\n\n")
             #Example output: Enola results: {'cir_fidelity': 0.7530460209580623, 'cir_fidelity_1q_gate': 1,
             # 'cir_fidelity_2q_gate': 0.9558895783575597, 'cir_fidelity_2q_gate_for_idle': 0.8350819830107532,
@@ -172,7 +174,7 @@ if __name__ == '__main__':
             # 'total': 93.49402737617493, 'GateCount': 18, 'Num CZ Gates': 5}
 
          if dasAtom:
-             params = {
+             paramsOld = {
                 "interaction_radius": "2",
                 "T_cz": "0.36",
                 "T_eff": "1.5e6",
@@ -184,6 +186,20 @@ if __name__ == '__main__':
                 "F_trans": "0.9999",
                 "F_1Q": "0.9999"
                 }
+
+             params = {
+                 "interaction_radius": "2",
+                 "T_cz": "0.36",
+                 "T_eff": "1.5e6",
+                 "T_trans": "0.55",
+                 "T_1Q": "0.36",
+                 "AOD_width": "2",
+                 "AOD_height": "2",
+                 "Move_speed": "0.55",
+                 "F_cz": "0.9996",
+                 "F_trans": "0.9999",
+                 "F_1Q": "0.9999"
+             }
              try:
                  result = DasAtomRunner.run(abs_path, params)
                  print(f"DasAtom results: {result}")

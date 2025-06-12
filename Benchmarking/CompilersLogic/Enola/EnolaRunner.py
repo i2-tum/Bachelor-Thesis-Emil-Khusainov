@@ -19,6 +19,7 @@ def run(path_circuit_abs, parameters):
                     rel_path,
                     "--arch", str(parameters["arcitecture"]),
                     "--routing_strategy", parameters["routing_strategy"],
+                    "--params", parameters["hardware_times"]
                     ]
     if parameters["trivial_layout"]:
         command.append("--trivial_layout")
@@ -31,8 +32,9 @@ def run(path_circuit_abs, parameters):
 
     proc = None
     try:
+        proc = None
         proc = subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.PIPE, check=True, cwd= cwd)
-        #output = proc.stdout
+        output = proc.stdout
     except Exception as e:
         print(proc.stderr)
         return {}
@@ -100,18 +102,26 @@ print(json.dumps(dict))"""
         "animation.py", "-h"
     ]
 
-    result2 = ""
-    try:
-        result2 = subprocess.run(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            check=True, cwd=cwd
-        )
-        #output = proc.stdout
-    except Exception as e:
-        print(proc.stderr)
-        return {}
+    #result2 = ""
+    #try:
+    #    result2 = subprocess.run(
+    #        cmd,
+    #        stdout=subprocess.PIPE,
+    #        stderr=subprocess.PIPE,
+    #        check=True, cwd=cwd
+    #    )
+    #    #output = proc.stdout
+    #except Exception as e:
+    #    print(proc.stderr)
+    #    return {}
 
-    return fidelityDict | timeDict | json.loads(result.stdout.strip())
+
+    #add 1q fidelity
+    gateDict = json.loads(result.stdout.strip())
+    singleQubitsCount = int(gateDict["GateCount"]) - int(gateDict["Num CZ Gates"])
+    with open(parameters["hardware_fidelities"], "r", encoding="utf-8") as f:
+        hardwareArch = json.load(f)
+        fidelityDict["cir_fidelity_1q_gate"] = hardwareArch["1QG"] ** singleQubitsCount
+        fidelityDict["cir_fidelity"] = fidelityDict["cir_fidelity"] * fidelityDict["cir_fidelity_1q_gate"]
+    return fidelityDict | timeDict | gateDict
 

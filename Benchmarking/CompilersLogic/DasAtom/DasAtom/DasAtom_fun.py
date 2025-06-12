@@ -320,7 +320,7 @@ def get_parallel_gates(gates, coupling_graph, mapping, r_re):
 
     return para'''
 
-def set_parameters(T_cz = 0.2, T_eff = 1.5e6, T_trans=20, AOD_width=3,AOD_height=3,Move_speed=0.55,F_cz=0.995, F_trans = 1, F_1Q = 1):
+def set_parameters(T_cz = 0.2, T_eff = 1.5e6, T_trans=20, AOD_width=3,AOD_height=3,Move_speed=0.55,F_cz=0.995, F_trans = 1, F_1Q = 1, T_1Q = 0.36):
     global parameters
     if parameters != {}:
         return parameters
@@ -334,6 +334,7 @@ def set_parameters(T_cz = 0.2, T_eff = 1.5e6, T_trans=20, AOD_width=3,AOD_height
     para['F_cz'] = F_cz
     para['F_trans'] = F_trans
     para['F_1Q'] = F_1Q
+    para['T_1Q'] = T_1Q
     parameters = para
     return para
 
@@ -387,12 +388,13 @@ def compute_fidelity(parallel_gates, all_movements, num_q, gate_num, para=None, 
         t_total += (max_dis/para['Move_speed'])
         t_move += (max_dis/para['Move_speed'])
 
-    t_idle = num_q * t_total - gate_num * para['T_cz']
-    Fidelity = math.exp(-t_idle/para['T_eff']) * (para['F_cz']**gate_num) * (para['F_trans'] ** num_trans)
+    t_idle = num_q * t_total - gate_num * para['T_cz'] - gate_1Q_num * para['T_1Q']
+    Fidelity = math.exp(-t_idle/para['T_eff']) * (para['F_cz']**gate_num) * (para['F_trans'] ** num_trans) * (para['F_1Q'] ** gate_1Q_num)
     move_fidelity = math.exp(-t_move/para['T_eff'])
-    Fidelity1Q = Fidelity * (para["F_1Q"] ** gate_1Q_num)
+    Fidelity1Q = (para["F_1Q"] ** gate_1Q_num)
+    Fidelity2Q = (para['F_cz']**gate_num)
     FidelityCoherence = math.exp(-t_idle/para['T_eff'])
-    return t_idle, Fidelity, move_fidelity, t_total, num_trans, num_move, all_move_dis, Fidelity1Q, FidelityCoherence
+    return t_idle, Fidelity, move_fidelity, t_total, num_trans, num_move, all_move_dis, Fidelity1Q, FidelityCoherence, Fidelity2Q
 
 def get_embeddings(partition_gates, coupling_graph, num_q, arch_size, Rb, initial_mapping=None):
     embeddings = []
