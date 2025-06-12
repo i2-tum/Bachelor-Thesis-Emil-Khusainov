@@ -1,12 +1,12 @@
 from enola.router.router_mis import route_qubit_mis
-from enola.router.codegen import CodeGen
+from enola.router.codegen import CodeGen, set_hardware_paramters
 import time
 
 # from memory_profiler import profile
 
 # @profile
 def route_qubit(n_x: int, n_y: int, n_q: int, list_full_gates: list, qubit_mapping: list, routing_strategy: str, \
-                reverse_to_initial: bool, l2: bool, use_window: bool):
+                reverse_to_initial: bool, l2: bool, use_window: bool, params: dict):
     """
     generate rearrangement layers between two Rydberg layers
     """
@@ -29,6 +29,7 @@ def route_qubit(n_x: int, n_y: int, n_q: int, list_full_gates: list, qubit_mappi
         data['n_c'] = n_x
         # print("#layers: {}".format(len(data["layers"])))
         t_s = time.time()
+        set_hardware_paramters(params)
         codegen = CodeGen(data)
         program = codegen.builder(no_transfer=False)
         tmp = program.emit_full()

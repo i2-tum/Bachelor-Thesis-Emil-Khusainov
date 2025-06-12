@@ -394,6 +394,7 @@ class Move(Inst):
 
         # movement time per Bluvstein et al. units are us and um.
         self.duration = 200*((max_distance/110)**(1/2))
+        self.duration = max_distance/0.55
         data['duration'] = self.duration
 
         for qubit_obj in qubit_objs:
@@ -1996,6 +1997,24 @@ class CodeGen():
 
 
 def set_hardware_paramters(param: dict):
+    global R_B
+    global AOD_SEP  # min AOD separation
+    global RYD_SEP   # sufficient distance to avoid Rydberg
+    global SITE_SLMS   # number of SLMs in a site
+    global SITE_WIDTH  # total width of SLMs in a site
+    global SLM_SEP   # separation of SLMs inside a site
+    global X_SITE_SEP # separation of sites in X direction
+    global Y_SITE_SEP  # separation of sites in Y direction
+
+    # padding of the figure
+    global X_LOW_PAD
+    global Y_LOW_PAD
+    global X_HIGH_PAD
+    global Y_HIGH_PAD
+
+    global T_RYDBERG   # microseconds for Rydberg
+    global T_ACTIVATE
+
     R_B = param["R_B"]  # rydberg range
     AOD_SEP = param["AOD_SEP"]  # min AOD separation
     RYD_SEP = param["RYD_SEP"]  # sufficient distance to avoid Rydberg

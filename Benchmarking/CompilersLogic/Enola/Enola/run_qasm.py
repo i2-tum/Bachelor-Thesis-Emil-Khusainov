@@ -3,6 +3,7 @@ import qiskit.qasm2
 import argparse
 import qiskit.circuit
 from qiskit import transpile
+import json
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -13,7 +14,13 @@ if __name__ == "__main__":
     parser.add_argument('--r2i',  help='whether reverse to initial mapping after each Rydberg', action='store_true', default=False)
     parser.add_argument('--window',  help='restrict vertex number in mis to 1000', action='store_true', default=False)
     parser.add_argument('--full_code',  help='generate full code for animation. The size of the code file could be large.', action='store_true', default=False)
+
+
+    parser.add_argument('--params', help='Adding Parameters', type=str)
     args = parser.parse_args()
+
+    with open(args.params, "r", encoding="utf-8") as f:
+        params: dict = json.load(f)
 
     list_gate_two_qubit = []
     with open(args.qasm, 'r') as f:
@@ -41,7 +48,7 @@ if __name__ == "__main__":
 
     tmp.setArchitecture([args.arch, args.arch, args.arch, args.arch])
     tmp.setProgram(list_gate_two_qubit)
-    tmp.solve(save_file=True)
+    tmp.solve(params, save_file=True)
 
 
 

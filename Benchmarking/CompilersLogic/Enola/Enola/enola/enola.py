@@ -74,7 +74,7 @@ class Enola:
         else:
             self.n_q = nqubit
 
-    def solve(self, save_file: bool = True):
+    def solve(self, params, save_file: bool = True):
         runtime_analysis = {}
         print("[INFO] Enola: Start Solving")
         if self.n_q > self.n_x * self.n_y:
@@ -121,7 +121,7 @@ class Enola:
         if self.to_verify:
             self.verify_qubit_mapping(qubit_mapping)
         # qubit movement between layers
-        program_list, time_mis, time_codeGen, time_placement = route_qubit(self.n_x, self.n_y, self.n_q, list_gates, qubit_mapping, self.routing_strategy, self.reverse_to_initial, self.l2, self.use_window)
+        program_list, time_mis, time_codeGen, time_placement = route_qubit(self.n_x, self.n_y, self.n_q, list_gates, qubit_mapping, self.routing_strategy, self.reverse_to_initial, self.l2, self.use_window, params)
         runtime_analysis["routing"] = time_mis
         runtime_analysis["codegen"] = time_codeGen
         runtime_analysis["placement"] = runtime_analysis["placement"] + time_placement
