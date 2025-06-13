@@ -14,12 +14,12 @@ import qiskit
 
 
 if __name__ == '__main__':
-     hybridMapper = True
-     enola = False
+     hybridMapper = False
+     enola = True
      dasAtom = False
      atomique = False
 
-     for i in range(2,31):
+     for i in range(4,10):
          CURRENT_QASM = f"CircuitsQASM/QFT/qft_indep_qiskit_{i}.qasm"
          abs_path = os.path.abspath(CURRENT_QASM)
          try:
@@ -193,8 +193,8 @@ if __name__ == '__main__':
                  "T_eff": "1.5e6",
                  "T_trans": "0.55",
                  "T_1Q": "0.36",
-                 "AOD_width": "2",
-                 "AOD_height": "2",
+                 "AOD_width": "8",
+                 "AOD_height": "8",
                  "Move_speed": "0.55",
                  "F_cz": "0.9996",
                  "F_trans": "0.9999",
