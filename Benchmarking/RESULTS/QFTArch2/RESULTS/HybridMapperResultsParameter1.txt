@@ -31,11 +31,11 @@ CZGateCount: 12.0
 ------------------------------------------------------------
 Architecture: Architecture2.json
 Circuit: qft_indep_qiskit_5.qasm
-{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 0.0, 'totalPlannedIdleTimeOfCircuit': 0.0, 'totalPlannedGateFidelitiesOfCircuit': 1.0, 'totalPlannedFidelitiesOfCircuit': 1.0, 'totalnCZsOfCircuit': 0.0, 'CompilationTime': 0.0020008087158203125, 'GateCount': 0}
-Fidelity: 1.0
-TotalTime: 0.0020008087158203125
-AllGateCount: 0
-CZGateCount: 0.0
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 373.0800000000002, 'totalPlannedIdleTimeOfCircuit': 74232.12000000004, 'totalPlannedGateFidelitiesOfCircuit': 0.9862929189595881, 'totalPlannedFidelitiesOfCircuit': 0.9379747102942657, 'totalnCZsOfCircuit': 20.0, 'CompilationTime': 0.016745328903198242, 'GateCount': 48}
+Fidelity: 0.9379747102942657
+TotalTime: 0.016745328903198242
+AllGateCount: 48
+CZGateCount: 20.0
 ------------------------------------------------------------
 
 ------------------------------------------------------------
@@ -287,4 +287,6 @@ TotalTime: 3.5387778282165527
 AllGateCount: 1578
 CZGateCount: 760.0
 ------------------------------------------------------------
+
+
 

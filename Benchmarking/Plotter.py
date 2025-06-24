@@ -194,13 +194,13 @@ def plotQFTAllGateCount():
     yDasAtom = AllGateCountListDasAtom30
     plt.plot(xDasAtom, yDasAtom, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='DasAtom')
 
-    plt.yscale('log')
+    #plt.yscale('log')
     plt.title('QFT - Architecture1')
     plt.xlabel('QubitAmount')
     plt.ylabel('AllGateCount')
     plt.grid(True)
     plt.legend()
-    plt.savefig('AllGateCountArch1.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Plots/AllGateCountArch2.png', dpi=300, bbox_inches='tight')
 
 def plotQFTCZGateCount():
     plt.figure()
@@ -228,13 +228,13 @@ def plotQFTCZGateCount():
     yDasAtom = CZGateCountListDasAtom30
     plt.plot(xDasAtom, yDasAtom, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='DasAtom')
 
-    plt.yscale('log')
+    #plt.yscale('log')
     plt.title('QFT - Architecture1')
     plt.xlabel('QubitAmount')
     plt.ylabel('CZGateCount')
     plt.grid(True)
     plt.legend()
-    plt.savefig('CZGateCountArch1.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Plots/CZGateCountArch2.png', dpi=300, bbox_inches='tight')
 
 def plotQFTTotalTime():
     plt.figure()
@@ -261,13 +261,13 @@ def plotQFTTotalTime():
     xDasAtom = range(2, len(TotalTimeListDasAtom30) + 2)
     yDasAtom = TotalTimeListDasAtom30
     plt.plot(xDasAtom, yDasAtom, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='DasAtom')
-    plt.yscale('log')
+    #plt.yscale('log')
     plt.title('QFT - Architecture1')
     plt.xlabel('QubitAmount')
     plt.ylabel('CompileTime s')
     plt.grid(True)
     plt.legend()
-    plt.savefig('CompileTimeArch1.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Plots/CompileTimeArch2.png', dpi=300, bbox_inches='tight')
 
 def plotQFTFidelity():
     plt.figure()
@@ -295,13 +295,13 @@ def plotQFTFidelity():
     yDasAtom = FidelityListDasAtom30
     plt.plot(xDasAtom, yDasAtom, marker='o', markersize=1,linewidth=0.5, linestyle='-', label='DasAtom')
 
-    plt.yscale('log')
+    #plt.yscale('log')
     plt.title('QFT - Architecture1')
     plt.xlabel('QubitAmount')
     plt.ylabel('Fidelity')
     plt.grid(True)
     plt.legend()
-    plt.savefig('FidelityArch1.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Plots/FidelityArch2.png', dpi=300, bbox_inches='tight')
 
 if __name__ == '__main__':
     with open('RESULTS/HybridMapperResultsParameter1.txt', 'r', encoding='utf-8') as hybridMapperFile1, \

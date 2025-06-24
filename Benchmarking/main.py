@@ -14,12 +14,12 @@ import qiskit
 
 
 if __name__ == '__main__':
-     hybridMapper = False
+     hybridMapper = True
      enola = True
-     dasAtom = False
+     dasAtom = True
      atomique = False
 
-     for i in range(4,10):
+     for i in range(5,6):
          CURRENT_QASM = f"CircuitsQASM/QFT/qft_indep_qiskit_{i}.qasm"
          abs_path = os.path.abspath(CURRENT_QASM)
          try:
