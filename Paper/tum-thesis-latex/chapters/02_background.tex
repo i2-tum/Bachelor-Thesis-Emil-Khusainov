@@ -1,0 +1,44 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Background}\label{chapter:background}
+\section{Quantum Basics}
+\subsection{Idea of Quantum Computation}
+For more than 50 years of using classical paradigms of computations it has been recognized, 
+that parallel to classical exists also a quantum version of that.
+Which offers clearly different and maybe much more powerful features than common computational theory
+\parencite{Barenco_1995}.
+
+\subsection{Quantum State and its Representation}
+Quantum mechanics uses operations with states in a complex Hilbert space to perform computations.
+This quantum state serves as an analog of an ordinary bit in the quantum world.
+In the following considered only one-qubit system for simplicity w.l.o.g. in so-called computational basis.
+Moreover, this state possesses not only basis states \(|0\rangle\) and \(|1\rangle\),
+but also an infinite amount of combinations of this eigenstates, this is called a quantum superposition. 
+To represent it two complex numbers \(\alpha\) and \(\beta\) are used.
+For one-qubit system we define a quantum state as follows:
+\parencite{nielsen00}.
+\[
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+\]
+The coefficients must satisfy the following normalization condition:
+\[
+|\alpha|^2 + |\beta|^2 = 1
+\]
+To transfer quantum information into classical bits a measurement operation is performed.
+Measurement will always collapse a wave function into one of corresponding to result the basis states. 
+The probability of outcome is calculated with Born's rule as follows:
+\[
+P(0) = |\alpha|^2, \quad P(1) = |\beta|^2
+\]
+For visualization, the state can be represented geometrically as vector in Bloch Sphere, 
+where angles \(\theta\) and \(\phi\) will uniquely determine the position of the vector. 
+\[
+|\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle
+\]
+
+%\[|\psi\rangle \otimes |0\rangle \rightarrow |\psi\rangle \otimes |\psi\rangle \]
+
+%\[|\Phi^+\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}\]
+
+\subsection{Quantum Gates}

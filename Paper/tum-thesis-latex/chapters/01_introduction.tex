@@ -2,94 +2,40 @@
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
 \chapter{Introduction}\label{chapter:introduction}
+Classical Computing on CPU is not exhaustive. That's why scientists introduce coprocessors such as GPUs and FPGAs.
+They were created to accelerate certain types of tasks, which they successfully did, 
+but now they have reached the limit according to computability theory.
+Thus, there are a lot of problems that cannot be efficiently solved only by changing and adapting classical CPU architecture.
+Some of those haven't any proven polynomial classical algorithm.
+Nevertheless, a number of quantum states saved in one quantum register grows exponentially with number of qubits, 
+that allows to solve some of the problems in efficiently way.
+Theoretically, this will give such a scale, which is often called quantum advantage.
 
-\section{Section}
-Citation test~\parencite{latex}.
+Nowadays \ac{QC} don't outperform classical ones, however they have a huge potential to do that in the near future. 
+Current state is called \ac{NISQ} which allows exploring a world of quantum entanglements, 
+superpositions, error corrections and quantum information interpretation.
+To leave this era and go into \ac{FTQC} new ways to correct or not to make errors, 
+to improve coherence time and operating temperatures, together with overall fidelity and speed improvements considered.
 
-Acronyms must be added in \texttt{main.tex} and are referenced using macros. The first occurrence is automatically replaced with the long version of the acronym, while all subsequent usages use the abbreviation.
+One of those ways is to explore different architectures for \ac{QC}, which potentially can solve one or more of above-mentioned constraints.
+There are already few promising architectures such as Trapped-Ion \ac{QC}, Superconducting \ac{QC}, Topological \ac{QC} and a few more.
+In this work only a \ac{NAQC} will be considered. 
 
-E.g. \texttt{\textbackslash ac\{TUM\}, \textbackslash ac\{TUM\}} $\Rightarrow$ \ac{TUM}, \ac{TUM}
+\ac{NAQC} has several advantages over other architectures.
+For example a long coherence time of qubits that are based on Rydberg states of Rubidium or Cesium.
+This allows to make a lot more calculations before fidelity became unacceptable low. 
+Moreover, \ac{NAQC} has a rare feature that sets it apart from others.
+This feature is a possibility to execute gates not in strictly defined positions but everywhere where a Rydberg laser can point.
+Due to this, gates can be applied to several qubits at once implementing a built-in multi-qubit gate support.
+And the most interesting now is that atoms can be physically moved by \ac{AOD} 
+that can be used for separating zones or as another possibility 
+to perform an analogous for SWAP but physically and not logically or moreover consider a combination of those
 
-For more details, see the documentation of the \texttt{acronym} package\footnote{\url{https://ctan.org/pkg/acronym}}.
-\subsection{Subsection}
+All this brings a huge number of possibilities for optimizing quantum computations in \ac{NISQ}
+and at the same time complexities during compilation.
 
-See~\autoref{tab:sample}, \autoref{fig:sample-drawing}, \autoref{fig:sample-plot}, \autoref{fig:sample-listing}.
-
-\begin{table}[htpb]
-  \caption[Example table]{An example for a simple table.}\label{tab:sample}
-  \centering
-  \begin{tabular}{l l l l}
-    \toprule
-      A & B & C & D \\
-    \midrule
-      1 & 2 & 1 & 2 \\
-      2 & 3 & 2 & 3 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{figure}[htpb]
-  \centering
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}[node distance=3cm]
-    \node (R0) {$R_1$};
-    \node (R1) [right of=R0] {$R_2$};
-    \node (R2) [below of=R1] {$R_4$};
-    \node (R3) [below of=R0] {$R_3$};
-    \node (R4) [right of=R1] {$R_5$};
-
-    \path[every node]
-      (R0) edge (R1)
-      (R0) edge (R3)
-      (R3) edge (R2)
-      (R2) edge (R1)
-      (R1) edge (R4);
-  \end{tikzpicture}
-  \caption[Example drawing]{An example for a simple drawing.}\label{fig:sample-drawing}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-
-  \pgfplotstableset{col sep=&, row sep=\\}
-  % This should probably go into a file in data/
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1000 \\
-    2 & 1500 \\
-    3 & 1600 \\
-  }\exampleA
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1200 \\
-    2 & 800 \\
-    3 & 1400 \\
-  }\exampleB
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}
-    \begin{axis}[
-        ymin=0,
-        legend style={legend pos=south east},
-        grid,
-        thick,
-        ylabel=Y,
-        xlabel=X
-      ]
-      \addplot table[x=a, y=b]{\exampleA};
-      \addlegendentry{Example A}
-      \addplot table[x=a, y=b]{\exampleB};
-      \addlegendentry{Example B}
-    \end{axis}
-  \end{tikzpicture}
-  \caption[Example plot]{An example for a simple plot.}\label{fig:sample-plot}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{tabular}{c}
-  \begin{lstlisting}[language=SQL]
-    SELECT * FROM tbl WHERE tbl.str = "str"
-  \end{lstlisting}
-  \end{tabular}
-  \caption[Example listing]{An example for a source code listing.}\label{fig:sample-listing}
-\end{figure}
+In this work a different tool chains in compilation will be considered, such as HybridMapper from \ac{MQT}, 
+DasAtom or Enola from \ac{UCLA-VAST}.
+They will be benchmarked, evaluated, then the issues in calculations will be fixed and the result will be evaluated again.
+For consistency the used architecture will be approximated as closely as possible between used compilers
+\parencite{Henriet_2020, Schmid_2024_NeutralAtomBasics}.
