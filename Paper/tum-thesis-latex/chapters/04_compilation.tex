@@ -29,7 +29,7 @@ Consider \ref{fig:compilation_steps}.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/compilation_steps.pdf}
-    \caption{\textbf{Illustration of the three steps for platform-dependent compilation.} In the \textbf{synthesis} step, general operations and unitaries are decomposed into the native gate set $\Sigma_{\mathrm{native}}$.
+    \caption[Illustration of the three steps for platform-dependent compilation]{\textbf{Illustration of the three steps for platform-dependent compilation.} In the \textbf{synthesis} step, general operations and unitaries are decomposed into the native gate set $\Sigma_{\mathrm{native}}$.
   During the \textbf{mapping} step, the circuit qubits $q_{i}$ are assigned to physical hardware qubits $Q_{i}$, and necessary SWAP or MOVE operations are introduced to satisfy connectivity constraints.
   Finally, in the \textbf{scheduling} step, gate times and restrictions on parallelism are considered.
   In practice, these steps are often performed simultaneously as a single step rather than sequentially. \parencite{Schmid_2024_NeutralAtomBasics}}
@@ -81,11 +81,11 @@ For more generic circuits Enola can use the dependency DAG (directed acyclic gra
 gates in a generic circuit. In this case, the scheduling problem is
 straightforward: the optimal number of stages is the critical path
 in the DAG and ASAP (as soon as possible) scheduling can achieve
-optimality \parencite{Tan_2025_Enola}a. Visualization \ref{fig:scheduling_Enola}
+optimality \parencite{Tan_2025_Enola}. Visualization \ref{fig:scheduling_Enola}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/scheduling_Enola.pdf}
-    \caption{ Scheduling in Enola. 
+    \caption [Scheduling in Enola]{ Scheduling in Enola. 
     \textbf{(a)} Scheduling a commutation group of two-qubit gates with edge coloring. 
     \textbf{(b)} Generic circuits can be divided to dependency subcircuits and commutation groups. 
     Dependency subcircuits are scheduled ASAP \parencite{Tan_2025_Enola}.}
@@ -106,7 +106,7 @@ Visualization \ref{fig:placement_Enola}.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/placement_Enola.pdf}
-    \caption{ Placement in Enola. 
+    \caption[Placement in Enola]{ Placement in Enola. 
     \textbf{(a)} Trivial placement from left to right, from top to bottom. 
     \textbf{(b)} Placement with gate distance optimized by simulated annealing. 
     \textbf{(c)} Dynamic placement: after a Rydberg stage (red) is executed (left), run simulated
@@ -123,7 +123,7 @@ Visualization \ref{fig:routing_Enola}.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/routing_Enola.pdf}
-    \caption{Routing in Enola. 
+    \caption[Routing in Enola]{Routing in Enola. 
     \textbf{(a)} Definition of a move as a 4-tuple. 
     \textbf{(b)} Conflicts between two moves. 
     \textbf{(c)} Compatible moves are independent sets (IS) in the conflict graph (filled vertices).
