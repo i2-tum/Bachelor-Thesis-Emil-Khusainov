@@ -1,9 +1,11 @@
 \chapter{\abstractname}
-\ac{NAQC} are new emerging architecture in the world of quantum computations. 
-Its high fidelity, native multi-qubit gates and possibility to use in \ac{DPQA} features a lot of promises.
-Moreover, \ac{DPQA} allows using physical shuttling of qubits during circuit execution instead or together with logical SWAP gates. 
+\ac{NAQC} are new emerging architecture in the world of quantum computations \parencite{Schmid_2024_NeutralAtomBasics}. 
+Its high fidelity, native multi-qubit gates and possibility to use in \ac{DPQA} features a multitude of promises \parencite{Levine_2019, Schmid_2024_NeutralAtomBasics, Wintersperger_2023}.
+Moreover, \ac{DPQA} allows using physical shuttling of qubits during circuit execution instead or together with logical SWAP gates \parencite{Tan_2025_Enola, Schmid_2024_NeutralAtomBasics}. 
 All this opens up new compilation possibilities. 
 Therefore, a new software tools that should take an advantage of additional capabilities of \ac{NAQC} are needed.
-The goal of this work is to compare exiting tool chains for compilation, that took shuttling into account.
-Moreover, the solutions will be balanced in places where they differ to compare the effectiveness of the algorithms they use and show inconsistencies in earlier benchmarks
-\parencite{Tan_2025_Enola, Schmid_2024_NeutralAtomBasics}.
+The goal of this work is to compare existing tool chains for compilation, that took possibility of qubit shuttling into account.
+Furthermore, the solutions will be aligned at their points of calculation divergence to enable direct comparison of the algorithms they use. 
+This approach will reveal potential inconsistencies present in early benchmarks 
+as well as in the considered compilers' own original publications
+\parencite{schmid2023hybridcircuitmappingleveraging, Tan_2025_Enola, huang2025dasatomdivideandshuttleatomapproach, gao2025optimalcompilationstrategiesqft}.

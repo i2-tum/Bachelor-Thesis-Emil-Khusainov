@@ -2,13 +2,14 @@
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
 \chapter{Neutral Atom Architecture}\label{chapter:neutralatom}
-There are already an impressive amount of approaches for building a \ac{QC}.
+There are already a considerable amount of approaches for building a \ac{QC}.
 All of them are based on different physical systems that manage the creation, connection and manipulation of qubits \parencite{Wintersperger_2023}.
-Some of the most promising approaches are:
+Several of the promising approaches are:
 %\section{DiVichenzo Criteria?}
 \section{Prevalent Architectures}
 \subsection{Superconducting Qubits}
-This architecture uses superconducting resonant circuits, that apply microwave signals to control and read qubits. 
+The main insights into this technology have been collected by \parencite{Huang_2020}. 
+This architecture uses superconducting resonant circuits, which apply microwave signals to control and read qubits. 
 
 The strong sites are its very fast single- and two-qubit gates,
 electronics that cover current needs have been around for a long time and have been well studied 
@@ -16,10 +17,9 @@ e.g. commercial microwave devices can be used in experiments,
 an increase of qubit amount in moderate effort is possible, 
 different types of qubits \ref{fig:superconducting} and parameters with easy coupling nature of qubits allow high designability.
 
-The week sides are necessity in very low temperature to operate, strongly limited coherence times, 
+The week sides are necessity in close to absolute zero temperature to operate, strongly limited coherence times, 
 crosstalk between qubits requires careful design, complex error correction mechanisms,
-a qubit isn't true two-level system, thus unwanted transitions must be avoided during processing. 
-\parencite{Huang_2020}.
+a qubit is not true two-level system, thus undesired transitions must be avoided during processing.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/Superconducting.png}
@@ -29,58 +29,59 @@ a qubit isn't true two-level system, thus unwanted transitions must be avoided d
 \end{figure}
 
 \subsection{Photons}
-Uses photons as qubits, computations are done via beam splitters, phase shifters, and detectors, that brings several points.
+Key concepts of this technology are drawn from the work \parencite{romero2024photonicquantumcomputing}.
+Uses photons as qubits and raise several points; computations are done via beam splitters, phase shifters, and detectors.
 
 To advantages could be assigned operations with interference and entanglement by room temperatures,
 low decoherence due to weak interaction with environment,
-could be very helpful in the networks of quantum computers in the future.
+could bring a significant potential in the networks of quantum computers in the future.
 
 Meanwhile, disadvantages include necessity in high-quality hardware to save and detect states,
-complex error correction techniques, hard scaling
-\parencite{romero2024photonicquantumcomputing}.
+complex error correction techniques and hard scaling.
 
 \subsection{Topological}
-Encodes information non-locally using non-abelian anions such Majorana zero modes in topological superconductors 
+The main insights into this technology have been collected by \parencite{Lahtinen_2017, Zhang_2024}.
+Encodes information non-locally using non-abelian anions such as Majorana zero modes in topological superconductors 
 or exotic materials. 
-Logical gates are implemented via braiding operations that are inherently error-resistant.
+Logical gates are implemented via braiding operations which are inherently error-resistant.
 
-Advantages are built-in topological protection that offers resilience to local noise, 
+
+Advantages are built-in topological protection which enhances resilience to local noise, 
 potentially reducing error correction complexity.
 
 Disadvantages are hard experimental realization of stable non-abelian anions,
-some operations are still theoretical or nascent.
-\parencite{Lahtinen_2017, Zhang_2024}
+several operations are still theoretical or nascent.
 \subsection{Ion Traps}
+Key concepts of this technology are drawn from the work \parencite{Bruzewicz_2019}.
 Uses positive ions such as Yb or Ca  placed in electromagnetic traps. 
 Qubit states are encoded in stable electronic levels.
 
-The strong sites are huge coherence time, that can be exceptionally long also without applying of decoupling techniques,
-high fidelity of one-qubit and two-qubit gates, easy state preparation and readout.
+The strong sites are high coherence time, that can be exceptionally long also without applying of decoupling techniques,
+high fidelity of one-qubit and two-qubit gates, straightforward state preparation and readout.
 
-The week side is non-triviality by scaling over fifty ions due to heating and crowding.
-\parencite{Bruzewicz_2019}
+The weak side is non-trivial scaling over fifty ions due to heating and crowding processes.
 \section{Neutral Atom}
 The main considered physical architecture of this paper is \ac{NAQC}. 
 This type of computer uses laser cooling and trapping techniques for neutral atoms and
 optical or microwave pulses to manipulate quantum states.  
-It offers long coherence times, scaling in 2D or even 3D,
-and fair connectivities by long-range interactions (Rydberg states).
+It offers long coherence times, scaling in 1D, 2D or even 3D,
+and fair connectivities by long-range interactions between atoms in Rydberg state \parencite{Wintersperger_2023}.
 \subsection{Physical Hardware Implementation}
 Consider \ref{fig:ColdAtomArchitecture} to have a schematic overview.
-Neutral atoms such as Rubidium, Cesium or Strontium are placed in an ultra-high vacuum cell 
-in a specific geometric arrangement often by optical tweezers. 
-To work with them, they need to be cooled to very low temperatures.
+Neutral atoms such as Rubidium, Cesium or Strontium are positioned inside an ultra-high vacuum cell 
+in a specific geometric arrangement, typically achieved by optical tweezers. 
+To work with it, it needs to be cooled to low temperatures.
 The process of cooling is multistaged that especially involves Doppler cooling using a laser.
-To place cooled atoms on fixed locations and keep them there a trap laser controlled by \ac{SLM} is employed.
+To place cooled atoms on fixed locations and keep them a trap laser controlled by \ac{SLM} is employed.
 With help of \ac{SLM} laser could be focused onto very small configurable points, this effect called optical tweezers.
 \ac{SLM} could arrange atoms in 1D, 2D,or even in 3D configuration.
 To move atoms there are another mobile traps controlled by \ac{AOD}.
-\ac{AOD} implements the similar to \ac{SLM} function, but for mobile optical tweezers.
-Then all of these electronic should be precisely calibrated to control process.
+\ac{AOD} implements the comparable to \ac{SLM} function, but for mobile optical tweezers.
+Then all electronics should be precisely calibrated to control process run \parencite{Schmid_2024_NeutralAtomBasics, Wintersperger_2023}.
 
 To perform actually computations laser and microwaves are employed, 
 depends on executed gate used so-called Raman or Rydberg pulses, 
-that could work locally or globally on arrangement of neutral atoms. 
+which could work locally or globally on arrangement of neutral atoms. 
 \parencite{Schmid_2024_NeutralAtomBasics, Wintersperger_2023}
 \begin{figure}[htbp]
   \centering
@@ -90,41 +91,40 @@ that could work locally or globally on arrangement of neutral atoms.
 \end{figure}
 
 \subsection{Processing}
+According to \parencite{Wintersperger_2023, Philipp_Wondra_TUM_Thesis_for_Informatics.pdf}.
 To use neutral atoms for performing quantum computations
-encoding of qubit computation basis state need be found. 
+encoding of qubit computation basis state needs to be determined.
 These encoding should have a long coherence time and weak interaction with environment.
 For Rubidium atom it is based on the spin of the furthest electron. 
 Meanwhile, a Strontium implementation a nuclear spin of atom is used.
 
-For implementing a one-qubit rotations operators two laser induced so-called Raman transition are used.
+For implementing a one-qubit rotations operators two laser induced known as Raman transition are used.
 Target atom exposure to multiple photons and after that emits some another amount of energy,
 what led to change of it state, by combining the duration, power and frequency of laser  
 different direction and angles of rotation could be achieved.
 
 For implementing a two-qubit gates a so-called Rydberg state is used. 
 In this state an outermost electron has a very huge influence on other atoms' electrons in arrangement.
-Thus, other atom cannot go in Rydberg state. This effect called Rydberg blockade.
-An effective impact of this effect is a Controlled-Z gate.
+Thus, other atom can not go in Rydberg state. This effect widely known as Rydberg blockade.
+An effective impact of this effect is an implementation of a Controlled-Z gate.
 
-Moreover, this effect allows implementing multiple-controlled Z-Gate directly on a hardware,
-because Rydberg blockade influences not only on neighbor qubits but as a decreasing by distance field.
+Moreover, this effect enables the implementation of multiple-controlled Z-Gate directly on hardware,
+since Rydberg blockade influences not only neighboring qubits but extends as a distance-dependent interaction.
 The strength of blockade obeys the proportion for small distances \(\frac{1}{|r|^3}\) and \(\frac{1}{|r|^6}\) for long.
 Depending on a coefficient that accepted for blocking and interacting, 
 different multiple-controlled Z-Gate are implemented.
 
-Also, Rydberg blockade effect is used for long interactions between qubits within the acceptable range, 
+In addition, Rydberg blockade effect is used for long-range interactions between qubits within the acceptable distance, 
 it is with \ac{NAQC} possible to execute a two-qubit gate 
-and do not require specifically place the atoms directly next to each other.
+and do not require specifically to place the atoms directly next to each other.
 
-Nevertheless, if an interaction radius is too small for gate execution,
-logical SWAP gates are considered to logically move qubit near to the target qubit.
+Nevertheless, if an interaction radius is small for gate execution,
+logical SWAP gates are considered to logically move qubit to the target qubit.
 But \ac{DPQA} could be based on neutral atoms. 
-Hence, It makes possible to use physical moving of qubit in lattice, by moving it from \ac{SLM} to \ac{AOD} and back.
-This process called shuttling.
+Hence, it makes possible to use physical moving of qubit in lattice, by moving it from \ac{SLM} to \ac{AOD} and back.
+This process is known as qubit shuttling.
 
-For visualization of the described consider \ref{fig:NeutralAtomFeatures}.
-
-\parencite{Wintersperger_2023, Philipp_Wondra_TUM_Thesis_for_Informatics.pdf}
+For visualization of the described features consider \ref{fig:NeutralAtomFeatures}.
 
 \begin{figure}[htbp]
   \centering

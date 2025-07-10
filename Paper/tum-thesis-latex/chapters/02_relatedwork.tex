@@ -1,0 +1,21 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Related Work}\label{chapter:relatedwork}
+In this work different compilation toolchains for neutral atom architecture are considered \parencite{huang2025dasatomdivideandshuttleatomapproach,Tan_2025_Enola, schmid2023hybridcircuitmappingleveraging}.
+The global goal is to determine the impact of qubit shuttling onto overall circuit fidelity and amount of gates.
+Moreover, during this work will be determined drastic mismatches in benchmarks of considered toolchains. 
+And a step in direction to possible fair comparison is done.
+
+As a related work consider \parencite{gao2025optimalcompilationstrategiesqft}.
+In it author tries to show possible mismatches in results of compilation because of minimal input parameters deviations, 
+often substantial and difficult to rationalize discrepancies. 
+Therefore, raising an important issue of fair evaluation, 
+which is essential for understanding which approaches perform better or worse.
+
+\section{Approach}
+The idea of this work is to bench different tools for neutral atom compilation to understand what approaches are better 
+and what considered hardware constraints raise significant impact on overall compilation quality.
+Similarly, it is important to consider the other side of the problem shown by \parencite{gao2025optimalcompilationstrategiesqft}.
+This aspect involves not only comparing discrepancies resulting by differences in input values, 
+but also to determine the reasons why a minority of these inputs made the compilation process ill-conditioned.

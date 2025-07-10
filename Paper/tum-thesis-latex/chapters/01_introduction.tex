@@ -2,40 +2,39 @@
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
 \chapter{Introduction}\label{chapter:introduction}
-Classical Computing on CPU is not exhaustive. That's why scientists introduce coprocessors such as GPUs and FPGAs.
+Classical Computing on CPU is not exhaustive \parencite{article}. Consequently, scientists introduced coprocessors such as GPUs and FPGAs.
 They were created to accelerate certain types of tasks, which they successfully did, 
-but now they have reached the limit according to computability theory.
-Thus, there are a lot of problems that cannot be efficiently solved only by changing and adapting classical CPU architecture.
-Some of those haven't any proven polynomial classical algorithm.
+but now they have reached the limit according to computability theory \parencite{article}.
+Thus, there are a multitude of problems that can not be efficiently solved only by changing and adapting classical CPU architectures.
+Several of those have not any proven polynomial classical algorithm \parencite{article, Markov_2014}.
 Nevertheless, a number of quantum states saved in one quantum register grows exponentially with number of qubits, 
-that allows to solve some of the problems in efficiently way.
-Theoretically, this will give such a scale, which is often called quantum advantage.
+that allows to solve particular problems in efficient way.
+Theoretically, this will give such a scale, which is often called quantum advantage \parencite{Markov_2014}.
 
-Nowadays \ac{QC} don't outperform classical ones, however they have a huge potential to do that in the near future. 
+Currently, \ac{QC} do not outperform classical systems, however they have a considerable potential to do that in the near future \parencite{article, Markov_2014}. 
 Current state is called \ac{NISQ} which allows exploring a world of quantum entanglements, 
-superpositions, error corrections and quantum information interpretation.
+superpositions, error corrections and quantum information interpretation \parencite{Preskill_2018}.
 To leave this era and go into \ac{FTQC} new ways to correct or not to make errors, 
-to improve coherence time and operating temperatures, together with overall fidelity and speed improvements considered.
+to improve coherence time and operating temperatures, together with overall fidelity and speed improvements considered \parencite{quera2023faulttolerant}.
 
 One of those ways is to explore different architectures for \ac{QC}, which potentially can solve one or more of above-mentioned constraints.
-There are already few promising architectures such as Trapped-Ion \ac{QC}, Superconducting \ac{QC}, Topological \ac{QC} and a few more.
-In this work only a \ac{NAQC} will be considered. 
+There are already several promising architectures such as Trapped-Ion \ac{QC} \parencite{Bruzewicz_2019}, Superconducting \ac{QC} \parencite{Huang_2020}, Topological \ac{QC} \parencite{Lahtinen_2017} and more.
+In this work only tools for \ac{NAQC} will be considered and evaluated \parencite{Wintersperger_2023, Schmid_2024_NeutralAtomBasics, Philipp_Wondra_TUM_Thesis_for_Informatics.pdf}. 
 
-\ac{NAQC} has several advantages over other architectures.
-For example a long coherence time of qubits that are based on Rydberg states of Rubidium or Cesium.
-This allows to make a lot more calculations before fidelity became unacceptable low. 
+\ac{NAQC} has several advantages over other architectures \parencite{schmid2023hybridcircuitmappingleveraging}.
+For example a long coherence time of qubits that are based on Rydberg states of Rubidium or Cesium \parencite{Schmid_2024_NeutralAtomBasics}.
+This allows to make a significantly more calculations before fidelity became unacceptable low. 
 Moreover, \ac{NAQC} has a rare feature that sets it apart from others.
-This feature is a possibility to execute gates not in strictly defined positions but everywhere where a Rydberg laser can point.
-Due to this, gates can be applied to several qubits at once implementing a built-in multi-qubit gate support.
-And the most interesting now is that atoms can be physically moved by \ac{AOD} 
+This feature is a possibility to execute gates not in strictly defined positions but everywhere where a Rydberg laser can point \parencite{Henriet_2020,Schmid_2024_NeutralAtomBasics}.
+As a result, gates can be applied to several qubits at once implementing a built-in multi-qubit gate support \parencite{Wintersperger_2023,Henriet_2020,Schmid_2024_NeutralAtomBasics, Levine_2019}.
+And the most interesting is that atoms can be physically moved by \ac{AOD} 
 that can be used for separating zones or as another possibility 
-to perform an analogous for SWAP but physically and not logically or moreover consider a combination of those
+to perform an analogous for SWAP but physically and not logically or moreover consider a combination of those \parencite{Wintersperger_2023, schmid2023hybridcircuitmappingleveraging}.
 
-All this brings a huge number of possibilities for optimizing quantum computations in \ac{NISQ}
-and at the same time complexities during compilation.
+Taken together, this leads to a considerable number of possibilities for optimizing quantum computations in \ac{NISQ}
+and at the same time complexities during compilation \parencite{huang2024qubitmappingadaptivedivideandconquer, huang2025dasatomdivideandshuttleatomapproach, Tan_2025_Enola, Schmid_2024_NeutralAtomBasics, schmid2023hybridcircuitmappingleveraging, 10082942}.
 
-In this work a different tool chains in compilation will be considered, such as HybridMapper from \ac{MQT}, 
-DasAtom or Enola from \ac{UCLA-VAST}.
-They will be benchmarked, evaluated, then the issues in calculations will be fixed and the result will be evaluated again.
-For consistency the used architecture will be approximated as closely as possible between used compilers
-\parencite{Henriet_2020, Schmid_2024_NeutralAtomBasics}.
+In this work a different tool chains in compilation will be considered, such as HybridMapper from \ac{MQT} \parencite{schmid2023hybridcircuitmappingleveraging}, 
+DasAtom \parencite{huang2025dasatomdivideandshuttleatomapproach} or Enola from \ac{UCLA-VAST} \parencite{Tan_2025_Enola}.
+They will be benchmarked, evaluated, then the issues in calculations \parencite{gao2025optimalcompilationstrategiesqft} will be fixed, and the result will be evaluated again.
+For consistency the used architectures will be approximated as closely as possible between used compilers.

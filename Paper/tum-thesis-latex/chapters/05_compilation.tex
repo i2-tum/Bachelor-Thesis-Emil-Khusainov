@@ -4,12 +4,13 @@
 \chapter{Compilation in \ac{NAQC}}\label{chapter:compilation}
 Compilation is a process of translating a high-level, 
 abstract description of a quantum algorithm into a low-level representation of operations suitable for hardware execution.
-To do this, this problem divided into multiple subproblems, 
-employing different layers of software each for specific subproblems, so-called compilation toolchain.
+To achieve it, this problem is divided into multiple subproblems, 
+employing different layers of software each for specific subproblems, well-known as compilation toolchain.
 Moreover, compilation should be familiar with computational capabilities of target hardware.
-As described in \ref{chapter:neutralatom} each compilation step for \ac{NAQC} should consider futher hardware constraints.
+As described in \ref{chapter:neutralatom} each compilation step for \ac{NAQC} should consider further hardware constraints.
 
-For example, that together with or instead of SWAP based losing of connectivity problem
+Described by \parencite{Tan_2025_Enola,Schmid_2024_NeutralAtomBasics}; 
+For example, that together with SWAP or instead of SWAP-based losing of connectivity problem
 there is also possible to shuttle qubit physical, 
 compiler should be able to calculate which way will be the most efficient in terms of speed, fidelity, calculation time in the specific situation.
 
@@ -19,10 +20,14 @@ and also an available set of gates on current machine.
 Moreover, compiler should consider idle time of qubits and calculate corresponding impact from coherence time.
 Thus, it should now which operations could be executed parallel and what properties do \ac{AOD} and \ac{SLM} have.
 
+Nevertheless, compiler should consider possible different grid architectures as described in \ref{chapter:neutralatom} 
+to take advantage from different lattice realizations. 
+Consequently, as described in \ref{chapter:neutralatom} interaction is not restricted only for interacting qubits but decays with distance, 
+following an inverse cubic law.  
+
 Also, compiler should consider different interaction radius and Rydberg blockade radius, 
 and schedule next step according to constraints that go from previous steps and architecture, 
 to improve overall quality of compilation.
-\parencite{Tan_2025_Enola,Schmid_2024_NeutralAtomBasics}
 
 \section{Compilation Steps}
 Consider \ref{fig:compilation_steps}.
@@ -38,23 +43,23 @@ Consider \ref{fig:compilation_steps}.
 
 \section{Considered Toolchains}
 In this work three Compiling Toolchains for \ac{NAQC} are considered, 
-since they all take a QASM circuit as import and are open-source python projects.
+since they take a QASM circuit as import and are open-source python projects \parencite{Tan_2025_Enola,schmid2023hybridcircuitmappingleveraging,huang2025dasatomdivideandshuttleatomapproach}.
 This chapter will cover algorithms that are used by these three, 
-describe a workflow, what tools each has, and what consider by compilation
-And the result of benchmarking will be evaluated in the next chapter.
+describe a workflow, what tools each toolchain uses, and what is considered by compilation.
+Nevertheless, the result of benchmarking will be evaluated in the next chapter.
 
 \subsection{HybridMapper MQT}
-HybridMapper, a Tool from \ac{MQT}, stands out from the previous works, 
+HybridMapper, a tool from \ac{MQT}, stands out from the previous works, 
 because it uses a hybrid compilation approach to map a circuit 
-and consider together SWAP gate and Shuttling to explore the potential advantage of leveraging gate-based SWAP insertions 
-and shuttling-based atom rearrangements.
-When other works individually only considered it separately.
+and considers together SWAP gates and shuttling to explore the potential advantage of leveraging gate-based SWAP insertions 
+and shuttling-based atom rearrangements \parencite{schmid2023hybridcircuitmappingleveraging}.
+When other works individually only considered it separately \parencite{Tan_2025_Enola,huang2025dasatomdivideandshuttleatomapproach,10082942}.
 In particular, this is only a mapping and scheduling stage of computation, without synthese and optimization steps.
-It simply took a QASM circuit and uses only gates that defined with architecture along with their times, and fidelities 
-and doesn't optimize circuit or change something in there, it finds places where interacting conditions are violated 
-and solves it with logical or physical move. 
+The process takes a QASM circuit as input and uses only gates that defined with architecture along with their times, and fidelities.
+\ac{HybridMapper} does not optimize circuit or change something in there, it finds places where interacting conditions are violated 
+and solves it with logical or physical move according to internal cost function \parencite{schmid2023hybridcircuitmappingleveraging}. 
 In advance, skipping synthese step gives advantages, 
-since other considered toolsets always try to transpile input circuit into Pauli Gates and CZ gate, without consideration of possible multi-qubit CZ gates.
+since other considered toolsets always try to transpile input circuit into Pauli Gates and CZ gate, without consideration of possible multi-qubit CZ gates \parencite{schmid2023hybridcircuitmappingleveraging}.
 
 The main idea of algorithm is to use two-capability-specific heuristic cost functions, 
 which specially made for fast evaluation 
@@ -70,8 +75,8 @@ Consider for accuracy \ref{fig:overview_HybridMapper}.
     \label{fig:overview_HybridMapper}
 \end{figure}
 \subsection{Enola}
-Enola a Tool from \ac{UCLA-VAST} based on OLSQ-DPQA uses different approach.
-It divides mapping and scheduling steps of compilation into scheduling, placement and routing steps to achieve great fidelity.
+Enola a Tool from \ac{UCLA-VAST} based on OLSQ-DPQA uses different approach \parencite{Tan_2025_Enola,Tan_2024}.
+It divides mapping and scheduling steps of compilation into scheduling, placement and routing steps to achieve excellent fidelity.
 
 Scheduling step is implemented thorough Edge Coloring problem of commutation group (a group consisting of commutable two-qubit
 gates that can be executed in any order) graph, 
@@ -81,7 +86,8 @@ For more generic circuits Enola can use the dependency DAG (directed acyclic gra
 gates in a generic circuit. In this case, the scheduling problem is
 straightforward: the optimal number of stages is the critical path
 in the DAG and ASAP (as soon as possible) scheduling can achieve
-optimality \parencite{Tan_2025_Enola}. Visualization \ref{fig:scheduling_Enola}
+optimality \parencite{Tan_2025_Enola}. 
+Visualization \ref{fig:scheduling_Enola}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/scheduling_Enola.pdf}
@@ -92,13 +98,13 @@ optimality \parencite{Tan_2025_Enola}. Visualization \ref{fig:scheduling_Enola}
     \label{fig:scheduling_Enola}
 \end{figure}
 
-Placement step is implemented through fast simulated annealing, 
+Placement step is implemented through fast simulated annealing algorithm, 
 qubits are mapped to interaction sited and the two-qubit
 gates at each Rydberg stage are like 2-pin nets in conventional
-circuit placement. Hence, the goal is ti minimize total "wire-length".
+circuit placement. Hence, the goal is to minimize total "wire-length".
 Fast simulated annealing has three-stages to explore possible states.
-At the first stage random search to explore a large solution space is used, the temperature is high, 
-thus a high probability of bad solution.
+At the first stage random search to explore a large solution space is used, the so-called temperature is high, 
+thus a probability of bad solution is high.
 Then, the second stage is a pseudo-greedy local search. 
 The last stage is a hill-climbing search where
 the temperature increases again to escape from local minima \parencite{Tan_2025_Enola}. 
@@ -114,7 +120,7 @@ Visualization \ref{fig:placement_Enola}.
     \label{fig:placement_Enola}
 \end{figure}
 
-Routing step is used for parallelize \ac{AOD} movements, 
+Routing step is used to parallelize the \ac{AOD} movements, 
 and not to violate fundamental rules of \ac{AOD} such as \textit{the order of its columns cannot change, nor can
 the order of rows}.
 Then the independent set of vertices is made of possible moves. 
@@ -132,25 +138,25 @@ Visualization \ref{fig:routing_Enola}.
     \label{fig:routing_Enola}
 \end{figure}
 
-Additionally, Enola always transpiles input circuit into fixed gate set from Pauli Gates and CZ, 
+Additionally, Enola transpiles input circuit into fixed gate set from Pauli Gates and CZ, 
 without consideration of a big advantage of \ac{NAQC} that allows to implement different gates.
-Also, it considers interaction radius, Rydberg blockade radius, durations and fidelities of gates,
+Nevertheless, it considers interaction radius, Rydberg blockade radius, durations and fidelities of gates,
 physical placement of \ac{SLM} and \ac{AOD} traps. 
-But important note is that Enola doesn't consider number of \ac{AOD}, 
-but make an independent set of gates called stages where each pair of gates could be executed without affecting other qubits in that stage.
+An important note is that Enola does not consider number of \ac{AOD}, 
+but make an independent set of gates so-called stages where each pair of gates could be executed without affecting other qubits in corresponding stage \parencite{Tan_2025_Enola}.
 
 \subsection{DasAtom}
 DasAtom was made as an improvement of Enola and Tetris 
-and used the weakest aspects of each to strengthen and made itself.
+and used the weakest aspects of each to strengthen them and made itself.
 Enola leverages atom shuttling to adapt qubit mappings dynamically,
 but cannot take advantage of long-range interactions
 and Tetris' main idea is to leverage the long-range interactions of \ac{NAQC} 
-to achieve denser qubit connectivity\parencite{10082942, huang2025dasatomdivideandshuttleatomapproach}.
+to achieve denser qubit connectivity \parencite{10082942,Tan_2025_Enola, huang2025dasatomdivideandshuttleatomapproach}.
 
-The main idea of DasAtom is a bit changed \ac{DAC} approach to divide circuit into subcircuits.
+The main idea of DasAtom is a slightly changed \ac{DAC} approach to divide circuit into subcircuits.
 It was inspired from different DAC adaptations from \parencite{siraichi:hal-02316820, 10.1145/3508352.3549394, huang2024qubitmappingadaptivedivideandconquer}
 Then it assigns an optimal qubit mapping for each subcircuit, and then shuttles
-atoms to smoothly transition between mappings. This approach should improve overall fidelity and efficiency.
+atoms to smoothly transition between mappings. This approach should improve overall fidelity and efficiency \parencite{huang2025dasatomdivideandshuttleatomapproach}.
 Consider \ref{fig:DasAtomFlowChart}
 
 \begin{figure}
@@ -184,5 +190,5 @@ Consider \ref{fig:DasAtomFlowChart}
 \end{figure}
 
 DasAtom states about 415.8 times higher fidelity comparing to Enola in \ac{QFT}30. 
-This statement doesn’t quite seem to be full correct.
+This statement seems to be only partially correct.
 \parencite{huang2025dasatomdivideandshuttleatomapproach}
