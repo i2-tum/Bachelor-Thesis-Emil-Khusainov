@@ -1,0 +1,3 @@
+Here nothing specific to do, this doesnt need venv in this folder.
+
+Architectures could be added as additional files in "architectures" folder and pointed then from main.py

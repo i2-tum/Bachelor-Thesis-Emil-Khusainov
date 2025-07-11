@@ -1,4 +1,4 @@
-Versions for venv in this directory or for that interpreter that will run main.py
+Versions for venv (Python 3.12) in this directory or for that interpreter that will run main.py
 qiskit 2.0.0
 qmap 0.4.1
 qiskit-qasm3-import 0.5.1
@@ -6,7 +6,21 @@ mqt 0.1.1
 mqt.qmap 3.0.0b2
 mqt-core 3.0.2
 
+Enabled compilers are in line 15 - 18 of main.py.
 
-To manipulate architecture and qasm files see absolute paths in main.py, it is possible to add your our change existing
+To control input consider 20 - 21.
 
-DO NOT forget to clone ENOLA submodule in CompilerLogix/Enola/Enola
+To manipulate architecture and qasm files see absolute paths in main.py, it is possible to add your our change existing.
+Consider e.g. for Hybrid Mapper variables Architecture1 and params1 in line 58-59
+that could be changed accordingly to your architectures,
+"Architecture" variable has a relative path to architecture template.
+Could be added new architectures in json.
+
+Foe Enola there will be a "hardware_times", "hardware_fidelities" and parameters as a dictionary in line 135 - 146
+
+For DasAtom only "params" in line 188 could be adapted.
+
+Do not forget to set venves for other compilers as well. Consider corresponding ReadMe.
+
+Results will be saved then in RESULTS folder and then using Plotter.py could be plotted.
+Consider that Plotter simply takes data one by one, so to plot 2,4,3 circuits it should be placed 2,3,4 in corresponding .txt in Results.

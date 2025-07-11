@@ -1,5 +1,3 @@
-from qiskit import QuantumCircuit, transpile
-
 import CompilersLogic.HybridMapperMQT.HybridMapperRunner as HybridMapper
 import CompilersLogic.Enola.EnolaRunner as EnolaRunner
 import CompilersLogic.DasAtom.DasAtomRunner as DasAtomRunner
@@ -19,7 +17,7 @@ if __name__ == '__main__':
      dasAtom = True
      atomique = False
 
-     for i in range(5,6):
+     for i in range(2,30):
          CURRENT_QASM = f"CircuitsQASM/QFT/qft_indep_qiskit_{i}.qasm"
          abs_path = os.path.abspath(CURRENT_QASM)
          try:

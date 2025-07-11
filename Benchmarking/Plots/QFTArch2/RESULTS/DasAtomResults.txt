@@ -1,0 +1,320 @@
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_2.qasm
+{'QASM File': 'qft_indep_qiskit_2.qasm', 'Num Qubits': 2, 'Num CZ Gates': 6, 'Circuit Depth': 6, 'Fidelity': 0.9959104599038332, 'Movement Fidelity': 1.0, 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 6, 'Num Partitions': 1, 'Elapsed Time (s)': 0.026860475540161133, 'Total_T (from fidelity calc)': 2.16, 'Idle Time': -3.96, 'FidelityWith1Q': 0.9983013593202381, 'FidelityCoherence': 1.0000026400034847, 'FidelityWith2Q': 0.9976023987203843, 'GateCount': 23, 'CompileTime': 3.869745969772339}
+Fidelity: 0.9959104599038332
+TotalTime: 3.869745969772339
+AllGateCount: 23
+CZGateCount: 6
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_3.qasm
+{'QASM File': 'qft_indep_qiskit_3.qasm', 'Num Qubits': 3, 'Num CZ Gates': 9, 'Circuit Depth': 9, 'Fidelity': 0.9930273721576897, 'Movement Fidelity': 1.0, 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 9, 'Num Partitions': 1, 'Elapsed Time (s)': 0.03194165229797363, 'Total_T (from fidelity calc)': 3.2399999999999998, 'Idle Time': -5.760000000000002, 'FidelityWith1Q': 0.9966056040206351, 'FidelityCoherence': 1.0000038400073727, 'FidelityWith2Q': 0.9964057546272247, 'GateCount': 43, 'CompileTime': 1.3467912673950195}
+Fidelity: 0.9930273721576897
+TotalTime: 1.3467912673950195
+AllGateCount: 43
+CZGateCount: 9
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_4.qasm
+{'QASM File': 'qft_indep_qiskit_4.qasm', 'Num Qubits': 4, 'Num CZ Gates': 18, 'Circuit Depth': 13, 'Fidelity': 0.9865911154873704, 'Movement Fidelity': 1.0, 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 18, 'Num Partitions': 1, 'Elapsed Time (s)': 0.01690983772277832, 'Total_T (from fidelity calc)': 6.4799999999999995, 'Idle Time': -3.240000000000002, 'FidelityWith1Q': 0.9937194903484969, 'FidelityCoherence': 1.0000021600023328, 'FidelityWith2Q': 0.9928244278542492, 'GateCount': 81, 'CompileTime': 1.3549506664276123}
+Fidelity: 0.9865911154873704
+TotalTime: 1.3549506664276123
+AllGateCount: 81
+CZGateCount: 18
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_5.qasm
+{'QASM File': 'qft_indep_qiskit_5.qasm', 'Num Qubits': 5, 'Num CZ Gates': 26, 'Circuit Depth': 17, 'Fidelity': 0.9804876926058275, 'Movement Fidelity': 1.0, 'Num Movement Ops': 0, 'Num Transferred Qubits': 0, 'Num Moves': 0, 'Total Move Distance': 0, 'Num Gate Cycles': 26, 'Num Partitions': 1, 'Elapsed Time (s)': 0.03731679916381836, 'Total_T (from fidelity calc)': 9.36, 'Idle Time': 3.960000000000001, 'FidelityWith1Q': 0.9907426505254555, 'FidelityCoherence': 0.9999973600034848, 'FidelityWith2Q': 0.9896518339820485, 'GateCount': 119, 'CompileTime': 1.426335096359253}
+Fidelity: 0.9804876926058275
+TotalTime: 1.426335096359253
+AllGateCount: 119
+CZGateCount: 26
+------------------------------------------------------------
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_6.qasm
+{'QASM File': 'qft_indep_qiskit_6.qasm', 'Num Qubits': 6, 'Num CZ Gates': 39, 'Circuit Depth': 21, 'Fidelity': 0.9687769270484192, 'Movement Fidelity': 0.9999161964860876, 'Num Movement Ops': 5, 'Num Transferred Qubits': 24, 'Num Moves': 6, 'Total Move Distance': 63.090796138981396, 'Num Gate Cycles': 39, 'Num Partitions': 2, 'Elapsed Time (s)': 0.022438526153564453, 'Total_T (from fidelity calc)': 139.75053843451164, 'Idle Time': 775.5032306070698, 'FidelityWith1Q': 0.986491391319793, 'FidelityCoherence': 0.9994831314688467, 'FidelityWith2Q': 0.9845179772037449, 'GateCount': 175, 'CompileTime': 1.3581874370574951}
+Fidelity: 0.9687769270484192
+TotalTime: 1.3581874370574951
+AllGateCount: 175
+CZGateCount: 39
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_7.qasm
+{'QASM File': 'qft_indep_qiskit_7.qasm', 'Num Qubits': 7, 'Num CZ Gates': 51, 'Circuit Depth': 25, 'Fidelity': 0.9598080424125415, 'Movement Fidelity': 0.9999161964860876, 'Num Movement Ops': 5, 'Num Transferred Qubits': 24, 'Num Moves': 6, 'Total Move Distance': 63.090796138981396, 'Num Gate Cycles': 51, 'Num Partitions': 2, 'Elapsed Time (s)': 0.029081344604492188, 'Total_T (from fidelity calc)': 144.0705384345116, 'Idle Time': 925.3337690415813, 'FidelityWith1Q': 0.9821601483548373, 'FidelityCoherence': 0.9993833010576484, 'FidelityWith2Q': 0.9798026735734614, 'GateCount': 231, 'CompileTime': 1.3781158924102783}
+Fidelity: 0.9598080424125415
+TotalTime: 1.3781158924102783
+AllGateCount: 231
+CZGateCount: 51
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_8.qasm
+{'QASM File': 'qft_indep_qiskit_8.qasm', 'Num Qubits': 8, 'Num CZ Gates': 68, 'Circuit Depth': 29, 'Fidelity': 0.9477479613095264, 'Movement Fidelity': 0.9999121802143978, 'Num Movement Ops': 5, 'Num Transferred Qubits': 32, 'Num Moves': 8, 'Total Move Distance': 66.40450463796616, 'Num Gate Cycles': 68, 'Num Partitions': 2, 'Elapsed Time (s)': 0.026198387145996094, 'Total_T (from fidelity calc)': 156.21546297812026, 'Idle Time': 1139.923703824962, 'FidelityWith1Q': 0.9765774820859323, 'FidelityCoherence': 0.9992403395523272, 'FidelityWith2Q': 0.9731612933179625, 'GateCount': 305, 'CompileTime': 1.3588252067565918}
+Fidelity: 0.9477479613095264
+TotalTime: 1.3588252067565918
+AllGateCount: 305
+CZGateCount: 68
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_9.qasm
+{'QASM File': 'qft_indep_qiskit_9.qasm', 'Num Qubits': 9, 'Num CZ Gates': 84, 'Circuit Depth': 33, 'Fidelity': 0.9320166469513336, 'Movement Fidelity': 0.9997771730504922, 'Num Movement Ops': 13, 'Num Transferred Qubits': 60, 'Num Moves': 15, 'Total Move Distance': 168.12271777491708, 'Num Gate Cycles': 84, 'Num Partitions': 3, 'Elapsed Time (s)': 0.03359651565551758, 'Total_T (from fidelity calc)': 364.51766868166726, 'Idle Time': 3144.2190181350056, 'FidelityWith1Q': 0.9709294454237272, 'FidelityCoherence': 0.9979060493677485, 'FidelityWith2Q': 0.9669517109047573, 'GateCount': 379, 'CompileTime': 1.3580305576324463}
+Fidelity: 0.9320166469513336
+TotalTime: 1.3580305576324463
+AllGateCount: 379
+CZGateCount: 84
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_10.qasm
+{'QASM File': 'qft_indep_qiskit_10.qasm', 'Num Qubits': 10, 'Num CZ Gates': 105, 'Circuit Depth': 37, 'Fidelity': 0.9152925040067756, 'Movement Fidelity': 0.9996638489216263, 'Num Movement Ops': 16, 'Num Transferred Qubits': 76, 'Num Moves': 19, 'Total Move Distance': 258.0112615949154, 'Num Gate Cycles': 105, 'Num Partitions': 3, 'Elapsed Time (s)': 0.045392513275146484, 'Total_T (from fidelity calc)': 542.1113847180277, 'Idle Time': 5251.5538471802765, 'FidelityWith1Q': 0.9640599185586785, 'FidelityCoherence': 0.9965050855821354, 'FidelityWith2Q': 0.9588617239516661, 'GateCount': 471, 'CompileTime': 1.313589334487915}
+Fidelity: 0.9152925040067756
+TotalTime: 1.313589334487915
+AllGateCount: 471
+CZGateCount: 105
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_11.qasm
+{'QASM File': 'qft_indep_qiskit_11.qasm', 'Num Qubits': 11, 'Num CZ Gates': 125, 'Circuit Depth': 41, 'Fidelity': 0.9016874552698759, 'Movement Fidelity': 0.999683691122586, 'Num Movement Ops': 15, 'Num Transferred Qubits': 80, 'Num Moves': 20, 'Total Move Distance': 242.84610373525058, 'Num Gate Cycles': 125, 'Num Partitions': 3, 'Elapsed Time (s)': 0.06197166442871094, 'Total_T (from fidelity calc)': 519.5383704277281, 'Idle Time': 5512.242074705008, 'FidelityWith1Q': 0.9571432711190884, 'FidelityCoherence': 0.9963319158673534, 'FidelityWith2Q': 0.9512199097166879, 'GateCount': 563, 'CompileTime': 1.4013803005218506}
+Fidelity: 0.9016874552698759
+TotalTime: 1.4013803005218506
+AllGateCount: 563
+CZGateCount: 125
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_12.qasm
+{'QASM File': 'qft_indep_qiskit_12.qasm', 'Num Qubits': 12, 'Num CZ Gates': 150, 'Circuit Depth': 45, 'Fidelity': 0.8809505179871121, 'Movement Fidelity': 0.9995194236841899, 'Num Movement Ops': 21, 'Num Transferred Qubits': 120, 'Num Moves': 30, 'Total Move Distance': 371.1607594348955, 'Num Gate Cycles': 150, 'Num Partitions': 4, 'Elapsed Time (s)': 0.07116556167602539, 'Total_T (from fidelity calc)': 775.0377444270829, 'Idle Time': 9058.172933124994, 'FidelityWith1Q': 0.9490416289858025, 'FidelityCoherence': 0.9939794148410818, 'FidelityWith2Q': 0.941753229463144, 'GateCount': 673, 'CompileTime': 1.3751683235168457}
+Fidelity: 0.8809505179871121
+TotalTime: 1.3751683235168457
+AllGateCount: 673
+CZGateCount: 150
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_13.qasm
+{'QASM File': 'qft_indep_qiskit_13.qasm', 'Num Qubits': 13, 'Num CZ Gates': 174, 'Circuit Depth': 49, 'Fidelity': 0.8616107142087615, 'Movement Fidelity': 0.9994094614350718, 'Num Movement Ops': 26, 'Num Transferred Qubits': 132, 'Num Moves': 33, 'Total Move Distance': 455.87822624096793, 'Num Gate Cycles': 174, 'Num Partitions': 4, 'Elapsed Time (s)': 0.0785224437713623, 'Total_T (from fidelity calc)': 948.7095022563057, 'Idle Time': 12051.343529331974, 'FidelityWith1Q': 0.9409144615243487, 'FidelityCoherence': 0.9919979591383873, 'FidelityWith2Q': 0.9327538645477371, 'GateCount': 783, 'CompileTime': 1.396444320678711}
+Fidelity: 0.8616107142087615
+TotalTime: 1.396444320678711
+AllGateCount: 783
+CZGateCount: 174
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_14.qasm
+{'QASM File': 'qft_indep_qiskit_14.qasm', 'Num Qubits': 14, 'Num CZ Gates': 203, 'Circuit Depth': 53, 'Fidelity': 0.8385039004030869, 'Movement Fidelity': 0.9992536956612735, 'Num Movement Ops': 33, 'Num Transferred Qubits': 172, 'Num Moves': 43, 'Total Move Distance': 576.000944015885, 'Num Gate Cycles': 203, 'Num Partitions': 5, 'Elapsed Time (s)': 0.09018397331237793, 'Total_T (from fidelity calc)': 1192.9544436652461, 'Idle Time': 16373.402211313443, 'FidelityWith1Q': 0.9316449048878185, 'FidelityCoherence': 0.989143757527508, 'FidelityWith2Q': 0.9219942938459437, 'GateCount': 911, 'CompileTime': 1.4039697647094727}
+Fidelity: 0.8385039004030869
+TotalTime: 1.4039697647094727
+AllGateCount: 911
+CZGateCount: 203
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_15.qasm
+{'QASM File': 'qft_indep_qiskit_15.qasm', 'Num Qubits': 15, 'Num CZ Gates': 231, 'Circuit Depth': 57, 'Fidelity': 0.8177185849202376, 'Movement Fidelity': 0.99915825283225, 'Num Movement Ops': 37, 'Num Transferred Qubits': 204, 'Num Moves': 51, 'Total Move Distance': 649.9638495565667, 'Num Gate Cycles': 231, 'Num Partitions': 5, 'Elapsed Time (s)': 0.09924077987670898, 'Total_T (from fidelity calc)': 1346.3124537392132, 'Idle Time': 19820.646806088196, 'FidelityWith1Q': 0.9223744219793707, 'FidelityCoherence': 0.9868731539877327, 'FidelityWith2Q': 0.9117235271430965, 'GateCount': 1039, 'CompileTime': 1.4478769302368164}
+Fidelity: 0.8177185849202376
+TotalTime: 1.4478769302368164
+AllGateCount: 1039
+CZGateCount: 231
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_16.qasm
+{'QASM File': 'qft_indep_qiskit_16.qasm', 'Num Qubits': 16, 'Num CZ Gates': 264, 'Circuit Depth': 61, 'Fidelity': 0.7904581916956196, 'Movement Fidelity': 0.9988827195506923, 'Num Movement Ops': 47, 'Num Transferred Qubits': 260, 'Num Moves': 65, 'Total Move Distance': 865.4016847341697, 'Num Gate Cycles': 264, 'Num Partitions': 6, 'Elapsed Time (s)': 0.15076088905334473, 'Total_T (from fidelity calc)': 1771.8976086075836, 'Idle Time': 27923.761737721336, 'FidelityWith1Q': 0.9120097434959707, 'FidelityCoherence': 0.9815563633794512, 'FidelityWith2Q': 0.89976548158198, 'GateCount': 1185, 'CompileTime': 1.481837272644043}
+Fidelity: 0.7904581916956196
+TotalTime: 1.481837272644043
+AllGateCount: 1185
+CZGateCount: 264
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_17.qasm
+{'QASM File': 'qft_indep_qiskit_17.qasm', 'Num Qubits': 17, 'Num CZ Gates': 296, 'Circuit Depth': 65, 'Fidelity': 0.7714767452582815, 'Movement Fidelity': 0.9989272200664441, 'Num Movement Ops': 46, 'Num Transferred Qubits': 276, 'Num Moves': 69, 'Total Move Distance': 829.8585134006081, 'Num Gate Cycles': 292, 'Num Partitions': 6, 'Elapsed Time (s)': 0.3210916519165039, 'Total_T (from fidelity calc)': 1715.1536607283795, 'Idle Time': 28678.45223238245, 'FidelityWith1Q': 0.9016713562694217, 'FidelityCoherence': 0.9810626400876802, 'FidelityWith2Q': 0.8883196040112462, 'GateCount': 1331, 'CompileTime': 1.635401725769043}
+Fidelity: 0.7714767452582815
+TotalTime: 1.635401725769043
+AllGateCount: 1331
+CZGateCount: 296
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_18.qasm
+{'QASM File': 'qft_indep_qiskit_18.qasm', 'Num Qubits': 18, 'Num CZ Gates': 333, 'Circuit Depth': 69, 'Fidelity': 0.7443906838019805, 'Movement Fidelity': 0.9986947108668269, 'Num Movement Ops': 53, 'Num Transferred Qubits': 344, 'Num Moves': 86, 'Total Move Distance': 1013.4369561814874, 'Num Gate Cycles': 325, 'Num Partitions': 7, 'Elapsed Time (s)': 0.4217243194580078, 'Total_T (from fidelity calc)': 2076.2126476027065, 'Idle Time': 36833.62765684872, 'FidelityWith1Q': 0.890291973104884, 'FidelityCoherence': 0.9757432879853738, 'FidelityWith2Q': 0.8752666929632834, 'GateCount': 1495, 'CompileTime': 1.7474167346954346}
+Fidelity: 0.7443906838019805
+TotalTime: 1.7474167346954346
+AllGateCount: 1495
+CZGateCount: 333
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_19.qasm
+{'QASM File': 'qft_indep_qiskit_19.qasm', 'Num Qubits': 19, 'Num CZ Gates': 369, 'Circuit Depth': 73, 'Fidelity': 0.7218588125747851, 'Movement Fidelity': 0.9986303792465, 'Num Movement Ops': 55, 'Num Transferred Qubits': 340, 'Num Moves': 85, 'Total Move Distance': 1064.16162156506, 'Num Gate Cycles': 361, 'Num Partitions': 7, 'Elapsed Time (s)': 0.3661675453186035, 'Total_T (from fidelity calc)': 2185.799311936474, 'Idle Time': 40932.94692679301, 'FidelityWith1Q': 0.8789682958038169, 'FidelityCoherence': 0.9730803395593828, 'FidelityWith2Q': 0.8627506808218984, 'GateCount': 1659, 'CompileTime': 1.6684293746948242}
+Fidelity: 0.7218588125747851
+TotalTime: 1.6684293746948242
+AllGateCount: 1659
+CZGateCount: 369
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_20.qasm
+{'QASM File': 'qft_indep_qiskit_20.qasm', 'Num Qubits': 20, 'Num CZ Gates': 410, 'Circuit Depth': 77, 'Fidelity': 0.6921186604417514, 'Movement Fidelity': 0.9983719267953016, 'Num Movement Ops': 67, 'Num Transferred Qubits': 472, 'Num Moves': 118, 'Total Move Distance': 1263.1849637875293, 'Num Gate Cycles': 398, 'Num Partitions': 8, 'Elapsed Time (s)': 0.43857502937316895, 'Total_T (from fidelity calc)': 2587.379934159143, 'Idle Time': 51084.83868318286, 'FidelityWith1Q': 0.8666611964257632, 'FidelityCoherence': 0.9665168377477065, 'FidelityWith2Q': 0.848714176172807, 'GateCount': 1841, 'CompileTime': 1.8077208995819092}
+Fidelity: 0.6921186604417514
+TotalTime: 1.8077208995819092
+AllGateCount: 1841
+CZGateCount: 410
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_21.qasm
+{'QASM File': 'qft_indep_qiskit_21.qasm', 'Num Qubits': 21, 'Num CZ Gates': 450, 'Circuit Depth': 81, 'Fidelity': 0.6659224539736667, 'Movement Fidelity': 0.9981771531465189, 'Num Movement Ops': 73, 'Num Transferred Qubits': 496, 'Num Moves': 124, 'Total Move Distance': 1416.890964944129, 'Num Gate Cycles': 438, 'Num Partitions': 8, 'Elapsed Time (s)': 0.4026777744293213, 'Total_T (from fidelity calc)': 2894.445390807507, 'Idle Time': 60055.07320695765, 'FidelityWith1Q': 0.8544409654052223, 'FidelityCoherence': 0.9607541639628163, 'FidelityWith2Q': 0.8352401342042148, 'GateCount': 2023, 'CompileTime': 1.718968152999878}
+Fidelity: 0.6659224539736667
+TotalTime: 1.718968152999878
+AllGateCount: 2023
+CZGateCount: 450
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_22.qasm
+{'QASM File': 'qft_indep_qiskit_22.qasm', 'Num Qubits': 22, 'Num CZ Gates': 495, 'Circuit Depth': 85, 'Fidelity': 0.6307321433166304, 'Movement Fidelity': 0.9976741494081827, 'Num Movement Ops': 92, 'Num Transferred Qubits': 612, 'Num Moves': 153, 'Total Move Distance': 1809.7416564647517, 'Num Gate Cycles': 479, 'Num Partitions': 9, 'Elapsed Time (s)': 0.45535969734191895, 'Total_T (from fidelity calc)': 3665.279375390451, 'Idle Time': 79835.86625858993, 'FidelityWith1Q': 0.8412985898556358, 'FidelityCoherence': 0.9481676836902017, 'FidelityWith2Q': 0.8203373584695296, 'GateCount': 2223, 'CompileTime': 1.796715497970581}
+Fidelity: 0.6307321433166304
+TotalTime: 1.796715497970581
+AllGateCount: 2223
+CZGateCount: 495
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_23.qasm
+{'QASM File': 'qft_indep_qiskit_23.qasm', 'Num Qubits': 23, 'Num CZ Gates': 539, 'Circuit Depth': 89, 'Fidelity': 0.6121616989939858, 'Movement Fidelity': 0.9978101748652087, 'Num Movement Ops': 85, 'Num Transferred Qubits': 580, 'Num Moves': 145, 'Total Move Distance': 1705.7367040381578, 'Num Gate Cycles': 519, 'Num Partitions': 9, 'Elapsed Time (s)': 0.4583258628845215, 'Total_T (from fidelity calc)': 3475.179461887554, 'Idle Time': 79056.84762341375, 'FidelityWith1Q': 0.8282755247177507, 'FidelityCoherence': 0.9486602384454861, 'FidelityWith2Q': 0.8060228947337332, 'GateCount': 2423, 'CompileTime': 1.8072912693023682}
+Fidelity: 0.6121616989939858
+TotalTime: 1.8072912693023682
+AllGateCount: 2423
+CZGateCount: 539
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_24.qasm
+{'QASM File': 'qft_indep_qiskit_24.qasm', 'Num Qubits': 24, 'Num CZ Gates': 588, 'Circuit Depth': 93, 'Fidelity': 0.5757160992145842, 'Movement Fidelity': 0.9971970013931633, 'Num Movement Ops': 104, 'Num Transferred Qubits': 748, 'Num Moves': 187, 'Total Move Distance': 2189.880850107217, 'Num Gate Cycles': 564, 'Num Partitions': 10, 'Elapsed Time (s)': 0.5096113681793213, 'Total_T (from fidelity calc)': 4413.4415456494735, 'Idle Time': 104971.83709558737, 'FidelityWith1Q': 0.8143945985111479, 'FidelityCoherence': 0.9324113260156387, 'FidelityWith2Q': 0.790375561210411, 'GateCount': 2641, 'CompileTime': 1.8621771335601807}
+Fidelity: 0.5757160992145842
+TotalTime: 1.8621771335601807
+AllGateCount: 2641
+CZGateCount: 588
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_25.qasm
+{'QASM File': 'qft_indep_qiskit_25.qasm', 'Num Qubits': 25, 'Num CZ Gates': 636, 'Circuit Depth': 97, 'Fidelity': 0.5503678023988514, 'Movement Fidelity': 0.9970182740744107, 'Num Movement Ops': 107, 'Num Transferred Qubits': 788, 'Num Moves': 197, 'Total Move Distance': 2334.1286045097177, 'Num Gate Cycles': 606, 'Num Partitions': 10, 'Elapsed Time (s)': 0.7332613468170166, 'Total_T (from fidelity calc)': 4697.430190017654, 'Idle Time': 116406.51475044135, 'FidelityWith1Q': 0.8006662257150637, 'FidelityCoherence': 0.9253304674477366, 'FidelityWith2Q': 0.7753421264382125, 'GateCount': 2859, 'CompileTime': 2.057727098464966}
+Fidelity: 0.5503678023988514
+TotalTime: 2.057727098464966
+AllGateCount: 2859
+CZGateCount: 636
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_26.qasm
+{'QASM File': 'qft_indep_qiskit_26.qasm', 'Num Qubits': 26, 'Num CZ Gates': 689, 'Circuit Depth': 101, 'Fidelity': 0.5334929511049996, 'Movement Fidelity': 0.9974052201516365, 'Num Movement Ops': 103, 'Num Transferred Qubits': 856, 'Num Moves': 214, 'Total Move Distance': 2018.8455026299869, 'Num Gate Cycles': 646, 'Num Partitions': 11, 'Elapsed Time (s)': 1.0363407135009766, 'Total_T (from fidelity calc)': 4129.788186599966, 'Idle Time': 106260.29285159912, 'FidelityWith1Q': 0.7861465678839927, 'FidelityCoherence': 0.9316107560711965, 'FidelityWith2Q': 0.759074664136725, 'GateCount': 3095, 'CompileTime': 2.3727245330810547}
+Fidelity: 0.5334929511049996
+TotalTime: 2.3727245330810547
+AllGateCount: 3095
+CZGateCount: 689
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_27.qasm
+{'QASM File': 'qft_indep_qiskit_27.qasm', 'Num Qubits': 27, 'Num CZ Gates': 741, 'Circuit Depth': 105, 'Fidelity': 0.5111581469450186, 'Movement Fidelity': 0.9973528024442995, 'Num Movement Ops': 101, 'Num Transferred Qubits': 928, 'Num Moves': 232, 'Total Move Distance': 2064.6237526765167, 'Num Gate Cycles': 684, 'Num Partitions': 11, 'Elapsed Time (s)': 1.0795581340789795, 'Total_T (from fidelity calc)': 4222.301368502749, 'Idle Time': 112802.97694957424, 'FidelityWith1Q': 0.7718130273339132, 'FidelityCoherence': 0.9275561153245715, 'FidelityWith2Q': 0.7434458880088952, 'GateCount': 3331, 'CompileTime': 2.4669721126556396}
+Fidelity: 0.5111581469450186
+TotalTime: 2.4669721126556396
+AllGateCount: 3331
+CZGateCount: 741
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_28.qasm
+{'QASM File': 'qft_indep_qiskit_28.qasm', 'Num Qubits': 28, 'Num CZ Gates': 798, 'Circuit Depth': 109, 'Fidelity': 0.4774452323898542, 'Movement Fidelity': 0.9968333640768122, 'Num Movement Ops': 121, 'Num Transferred Qubits': 1032, 'Num Moves': 258, 'Total Move Distance': 2470.2097677067263, 'Num Gate Cycles': 741, 'Num Partitions': 12, 'Elapsed Time (s)': 1.1720249652862549, 'Total_T (from fidelity calc)': 5024.250486739488, 'Idle Time': 139388.41362870566, 'FidelityWith1Q': 0.756756353057391, 'FidelityCoherence': 0.9112612873349759, 'FidelityWith2Q': 0.7266837833838978, 'GateCount': 3585, 'CompileTime': 2.5044095516204834}
+Fidelity: 0.4774452323898542
+TotalTime: 2.5044095516204834
+AllGateCount: 3585
+CZGateCount: 798
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_29.qasm
+{'QASM File': 'qft_indep_qiskit_29.qasm', 'Num Qubits': 29, 'Num CZ Gates': 854, 'Circuit Depth': 113, 'Fidelity': 0.44759183932455276, 'Movement Fidelity': 0.9962555029930161, 'Num Movement Ops': 126, 'Num Transferred Qubits': 1100, 'Num Moves': 275, 'Total Move Distance': 2942.548278491904, 'Num Gate Cycles': 778, 'Num Partitions': 12, 'Elapsed Time (s)': 1.4958243370056152, 'Total_T (from fidelity calc)': 5907.36777907617, 'Idle Time': 169931.62559320894, 'FidelityWith1Q': 0.7419192078850422, 'FidelityCoherence': 0.8928936926333709, 'FidelityWith2Q': 0.7105838391295662, 'GateCount': 3839, 'CompileTime': 2.8307409286499023}
+Fidelity: 0.44759183932455276
+TotalTime: 2.8307409286499023
+AllGateCount: 3839
+CZGateCount: 854
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+Params: {'interaction_radius': '2', 'T_cz': '0.36', 'T_eff': '1.5e6', 'T_trans': '0.55', 'T_1Q': '0.36', 'AOD_width': '8', 'AOD_height': '8', 'Move_speed': '0.55', 'F_cz': '0.9996', 'F_trans': '0.9999', 'F_1Q': '0.9999'}
+Circuit: qft_indep_qiskit_30.qasm
+{'QASM File': 'qft_indep_qiskit_30.qasm', 'Num Qubits': 30, 'Num CZ Gates': 915, 'Circuit Depth': 117, 'Fidelity': 0.4265716030169342, 'Movement Fidelity': 0.9964038344070466, 'Num Movement Ops': 133, 'Num Transferred Qubits': 1212, 'Num Moves': 303, 'Total Move Distance': 2811.2540561029514, 'Num Gate Cycles': 832, 'Num Partitions': 13, 'Elapsed Time (s)': 1.2586274147033691, 'Total_T (from fidelity calc)': 5703.491011096256, 'Idle Time': 169624.7703328877, 'FidelityWith1Q': 0.7264279456029353, 'FidelityCoherence': 0.893076370735641, 'FidelityWith2Q': 0.6934520251224212, 'GateCount': 4111, 'CompileTime': 2.6191060543060303}
+Fidelity: 0.4265716030169342
+TotalTime: 2.6191060543060303
+AllGateCount: 4111
+CZGateCount: 915
+------------------------------------------------------------
+
+
+
+

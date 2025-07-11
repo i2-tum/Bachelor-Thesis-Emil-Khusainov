@@ -1,0 +1,364 @@
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_2.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 1.7999999999999998, 'totalPlannedIdleTimeOfCircuit': 357.8399999999999, 'totalPlannedGateFidelitiesOfCircuit': 0.9998000100000001, 'totalPlannedFidelitiesOfCircuit': 0.9995579493325327, 'totalnCZsOfCircuit': 2.0, 'CompilationTime': 0.004027843475341797, 'GateCount': 6}
+Fidelity: 0.9995579493325327
+TotalTime: 0.004027843475341797
+AllGateCount: 6
+CZGateCount: 2.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_3.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 3.959999999999999, 'totalPlannedIdleTimeOfCircuit': 786.2399999999998, 'totalPlannedGateFidelitiesOfCircuit': 0.9994001499800017, 'totalPlannedFidelitiesOfCircuit': 0.9988685881275933, 'totalnCZsOfCircuit': 6.0, 'CompilationTime': 0.003996849060058594, 'GateCount': 16}
+Fidelity: 0.9988685881275933
+TotalTime: 0.003996849060058594
+AllGateCount: 16
+CZGateCount: 6.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_4.qasm
+{'nSwaps': 0.0, 'nMoves': 4.0, 'nMoveGroups': 4.0, 'totalPlannedExecutionTimeOfCircuit': 384.3018181818183, 'totalPlannedIdleTimeOfCircuit': 76471.38181818185, 'totalPlannedGateFidelitiesOfCircuit': 0.9968049550435942, 'totalPlannedFidelitiesOfCircuit': 0.9465364535326468, 'totalnCZsOfCircuit': 12.0, 'CompilationTime': 0.008033037185668945, 'GateCount': 30}
+Fidelity: 0.9465364535326468
+TotalTime: 0.008033037185668945
+AllGateCount: 30
+CZGateCount: 12.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+ManualCorrection FAILURE
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_6.qasm
+{'nSwaps': 0.0, 'nMoves': 9.0, 'nMoveGroups': 9.0, 'totalPlannedExecutionTimeOfCircuit': 898.8654545454546, 'totalPlannedIdleTimeOfCircuit': 178853.34545454546, 'totalPlannedGateFidelitiesOfCircuit': 0.9925276825963737, 'totalPlannedFidelitiesOfCircuit': 0.8793920415711152, 'totalnCZsOfCircuit': 30.0, 'CompilationTime': 0.013112306594848633, 'GateCount': 70}
+Fidelity: 0.8793920415711152
+TotalTime: 0.013112306594848633
+AllGateCount: 70
+CZGateCount: 30.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_7.qasm
+{'nSwaps': 0.0, 'nMoves': 16.0, 'nMoveGroups': 15.0, 'totalPlannedExecutionTimeOfCircuit': 1606.1018181818172, 'totalPlannedIdleTimeOfCircuit': 319587.6218181816, 'totalPlannedGateFidelitiesOfCircuit': 0.9883676006096995, 'totalPlannedFidelitiesOfCircuit': 0.796160185114223, 'totalnCZsOfCircuit': 42.0, 'CompilationTime': 0.022083759307861328, 'GateCount': 96}
+Fidelity: 0.796160185114223
+TotalTime: 0.022083759307861328
+AllGateCount: 96
+CZGateCount: 42.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_8.qasm
+{'nSwaps': 0.0, 'nMoves': 26.0, 'nMoveGroups': 22.0, 'totalPlannedExecutionTimeOfCircuit': 2257.6763636363657, 'totalPlannedIdleTimeOfCircuit': 449246.27636363683, 'totalPlannedGateFidelitiesOfCircuit': 0.9835362043809335, 'totalPlannedFidelitiesOfCircuit': 0.7257201473831841, 'totalnCZsOfCircuit': 56.0, 'CompilationTime': 0.037683725357055664, 'GateCount': 126}
+Fidelity: 0.7257201473831841
+TotalTime: 0.037683725357055664
+AllGateCount: 126
+CZGateCount: 56.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_9.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 3305.254545454552, 'totalPlannedIdleTimeOfCircuit': 657707.8545454559, 'totalPlannedGateFidelitiesOfCircuit': 0.9760892909928727, 'totalPlannedFidelitiesOfCircuit': 0.6254710759341906, 'totalnCZsOfCircuit': 72.0, 'CompilationTime': 0.13003921508789062, 'GateCount': 160}
+Fidelity: 0.6254710759341906
+TotalTime: 0.13003921508789062
+AllGateCount: 160
+CZGateCount: 72.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_10.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 3357.11636363637, 'totalPlannedIdleTimeOfCircuit': 668028.3563636376, 'totalPlannedGateFidelitiesOfCircuit': 0.9728733447625014, 'totalPlannedFidelitiesOfCircuit': 0.619071876303849, 'totalnCZsOfCircuit': 90.0, 'CompilationTime': 0.1506059169769287, 'GateCount': 198}
+Fidelity: 0.619071876303849
+TotalTime: 0.1506059169769287
+AllGateCount: 198
+CZGateCount: 90.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_11.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 4372.3454545454615, 'totalPlannedIdleTimeOfCircuit': 870048.1454545469, 'totalPlannedGateFidelitiesOfCircuit': 0.9660866730744385, 'totalPlannedFidelitiesOfCircuit': 0.5362073726082055, 'totalnCZsOfCircuit': 110.0, 'CompilationTime': 0.2598459720611572, 'GateCount': 240}
+Fidelity: 0.5362073726082055
+TotalTime: 0.2598459720611572
+AllGateCount: 240
+CZGateCount: 110.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_12.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 5317.40363636364, 'totalPlannedIdleTimeOfCircuit': 1058101.4036363643, 'totalPlannedGateFidelitiesOfCircuit': 0.9601151679167977, 'totalPlannedFidelitiesOfCircuit': 0.4692197899939287, 'totalnCZsOfCircuit': 132.0, 'CompilationTime': 0.30510449409484863, 'GateCount': 286}
+Fidelity: 0.4692197899939287
+TotalTime: 0.30510449409484863
+AllGateCount: 286
+CZGateCount: 132.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_13.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 6232.9381818181755, 'totalPlannedIdleTimeOfCircuit': 1240284.858181817, 'totalPlannedGateFidelitiesOfCircuit': 0.9520835788223959, 'totalPlannedFidelitiesOfCircuit': 0.4113290091396202, 'totalnCZsOfCircuit': 156.0, 'CompilationTime': 0.389695405960083, 'GateCount': 336}
+Fidelity: 0.4113290091396202
+TotalTime: 0.389695405960083
+AllGateCount: 336
+CZGateCount: 156.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_14.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 7405.952727272722, 'totalPlannedIdleTimeOfCircuit': 1473702.8727272719, 'totalPlannedGateFidelitiesOfCircuit': 0.9472400718326615, 'totalPlannedFidelitiesOfCircuit': 0.3494452713909147, 'totalnCZsOfCircuit': 182.0, 'CompilationTime': 0.5673654079437256, 'GateCount': 390}
+Fidelity: 0.3494452713909147
+TotalTime: 0.5673654079437256
+AllGateCount: 390
+CZGateCount: 182.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_15.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 9017.923636363628, 'totalPlannedIdleTimeOfCircuit': 1794467.083636362, 'totalPlannedGateFidelitiesOfCircuit': 0.9361277748589067, 'totalPlannedFidelitiesOfCircuit': 0.2779651980086534, 'totalnCZsOfCircuit': 210.0, 'CompilationTime': 0.7927098274230957, 'GateCount': 448}
+Fidelity: 0.2779651980086534
+TotalTime: 0.7927098274230957
+AllGateCount: 448
+CZGateCount: 210.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_16.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 13143.87999999996, 'totalPlannedIdleTimeOfCircuit': 2615532.3999999915, 'totalPlannedGateFidelitiesOfCircuit': 0.9093686146690727, 'totalPlannedFidelitiesOfCircuit': 0.15491970307321432, 'totalnCZsOfCircuit': 240.0, 'CompilationTime': 1.2031254768371582, 'GateCount': 510}
+Fidelity: 0.15491970307321432
+TotalTime: 1.2031254768371582
+AllGateCount: 510
+CZGateCount: 240.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_17.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 10538.338181818173, 'totalPlannedIdleTimeOfCircuit': 2096978.4581818166, 'totalPlannedGateFidelitiesOfCircuit': 0.9210839368136717, 'totalPlannedFidelitiesOfCircuit': 0.22287158316414007, 'totalnCZsOfCircuit': 272.0, 'CompilationTime': 1.2678248882293701, 'GateCount': 576}
+Fidelity: 0.22287158316414007
+TotalTime: 1.2678248882293701
+AllGateCount: 576
+CZGateCount: 272.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_18.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 13325.032727272684, 'totalPlannedIdleTimeOfCircuit': 2651526.7127272645, 'totalPlannedGateFidelitiesOfCircuit': 0.9042901295292599, 'totalPlannedFidelitiesOfCircuit': 0.15034768416678262, 'totalnCZsOfCircuit': 306.0, 'CompilationTime': 1.3735404014587402, 'GateCount': 646}
+Fidelity: 0.15034768416678262
+TotalTime: 1.3735404014587402
+AllGateCount: 646
+CZGateCount: 306.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_19.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 15127.716363636291, 'totalPlannedIdleTimeOfCircuit': 3010220.4363636216, 'totalPlannedGateFidelitiesOfCircuit': 0.8930562989312605, 'totalPlannedFidelitiesOfCircuit': 0.11648165525670603, 'totalnCZsOfCircuit': 342.0, 'CompilationTime': 1.767458200454712, 'GateCount': 720}
+Fidelity: 0.11648165525670603
+TotalTime: 1.767458200454712
+AllGateCount: 720
+CZGateCount: 342.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_20.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 11838.338181818124, 'totalPlannedIdleTimeOfCircuit': 2355598.538181807, 'totalPlannedGateFidelitiesOfCircuit': 0.8990601668293806, 'totalPlannedFidelitiesOfCircuit': 0.18261770933918897, 'totalnCZsOfCircuit': 380.0, 'CompilationTime': 1.9507262706756592, 'GateCount': 798}
+Fidelity: 0.18261770933918897
+TotalTime: 1.9507262706756592
+AllGateCount: 798
+CZGateCount: 380.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_21.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 13627.839999999958, 'totalPlannedIdleTimeOfCircuit': 2711712.6399999917, 'totalPlannedGateFidelitiesOfCircuit': 0.889668955653868, 'totalPlannedFidelitiesOfCircuit': 0.14201374952090728, 'totalnCZsOfCircuit': 418.0, 'CompilationTime': 2.633591413497925, 'GateCount': 876}
+Fidelity: 0.14201374952090728
+TotalTime: 2.633591413497925
+AllGateCount: 876
+CZGateCount: 418.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_22.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 12420.261818181778, 'totalPlannedIdleTimeOfCircuit': 2471370.741818174, 'totalPlannedGateFidelitiesOfCircuit': 0.886028598746256, 'totalPlannedFidelitiesOfCircuit': 0.1664100672096683, 'totalnCZsOfCircuit': 456.0, 'CompilationTime': 2.7125866413116455, 'GateCount': 954}
+Fidelity: 0.1664100672096683
+TotalTime: 2.7125866413116455
+AllGateCount: 954
+CZGateCount: 456.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_23.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 15466.003636363588, 'totalPlannedIdleTimeOfCircuit': 3077452.843636354, 'totalPlannedGateFidelitiesOfCircuit': 0.8717026896405322, 'totalPlannedFidelitiesOfCircuit': 0.10863989051122902, 'totalnCZsOfCircuit': 494.0, 'CompilationTime': 3.5262224674224854, 'GateCount': 1032}
+Fidelity: 0.10863989051122902
+TotalTime: 3.5262224674224854
+AllGateCount: 1032
+CZGateCount: 494.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_24.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 16275.450909090834, 'totalPlannedIdleTimeOfCircuit': 3238541.490909076, 'totalPlannedGateFidelitiesOfCircuit': 0.8636330332046294, 'totalPlannedFidelitiesOfCircuit': 0.09651851671341445, 'totalnCZsOfCircuit': 532.0, 'CompilationTime': 4.048294305801392, 'GateCount': 1110}
+Fidelity: 0.09651851671341445
+TotalTime: 4.048294305801392
+AllGateCount: 1110
+CZGateCount: 532.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_25.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 16320.799999999886, 'totalPlannedIdleTimeOfCircuit': 3247512.319999977, 'totalPlannedGateFidelitiesOfCircuit': 0.855210346913546, 'totalPlannedFidelitiesOfCircuit': 0.09499878688880321, 'totalnCZsOfCircuit': 570.0, 'CompilationTime': 4.115668773651123, 'GateCount': 1188}
+Fidelity: 0.09499878688880321
+TotalTime: 4.115668773651123
+AllGateCount: 1188
+CZGateCount: 570.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_26.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 19957.341818181834, 'totalPlannedIdleTimeOfCircuit': 3971174.421818185, 'totalPlannedGateFidelitiesOfCircuit': 0.8377723697104027, 'totalPlannedFidelitiesOfCircuit': 0.057030434824612945, 'totalnCZsOfCircuit': 608.0, 'CompilationTime': 4.726816892623901, 'GateCount': 1266}
+Fidelity: 0.057030434824612945
+TotalTime: 4.726816892623901
+AllGateCount: 1266
+CZGateCount: 608.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_27.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 21297.000000000055, 'totalPlannedIdleTimeOfCircuit': 4237736.160000011, 'totalPlannedGateFidelitiesOfCircuit': 0.826703216769656, 'totalPlannedFidelitiesOfCircuit': 0.046988879237632675, 'totalnCZsOfCircuit': 646.0, 'CompilationTime': 5.4117982387542725, 'GateCount': 1344}
+Fidelity: 0.046988879237632675
+TotalTime: 5.4117982387542725
+AllGateCount: 1344
+CZGateCount: 646.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_28.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 19852.214545454535, 'totalPlannedIdleTimeOfCircuit': 3950165.534545452, 'totalPlannedGateFidelitiesOfCircuit': 0.830847291613893, 'totalPlannedFidelitiesOfCircuit': 0.05736880383123213, 'totalnCZsOfCircuit': 684.0, 'CompilationTime': 5.219027757644653, 'GateCount': 1422}
+Fidelity: 0.05736880383123213
+TotalTime: 5.219027757644653
+AllGateCount: 1422
+CZGateCount: 684.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_29.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 28147.44000000021, 'totalPlannedIdleTimeOfCircuit': 5600928.000000041, 'totalPlannedGateFidelitiesOfCircuit': 0.7958763727931698, 'totalPlannedFidelitiesOfCircuit': 0.017984001969424283, 'totalnCZsOfCircuit': 722.0, 'CompilationTime': 6.2904253005981445, 'GateCount': 1500}
+Fidelity: 0.017984001969424283
+TotalTime: 6.2904253005981445
+AllGateCount: 1500
+CZGateCount: 722.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_30.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 31167.00727272764, 'totalPlannedIdleTimeOfCircuit': 6201800.6472728, 'totalPlannedGateFidelitiesOfCircuit': 0.7721218297415879, 'totalPlannedFidelitiesOfCircuit': 0.011618406140179414, 'totalnCZsOfCircuit': 760.0, 'CompilationTime': 7.004099130630493, 'GateCount': 1578}
+Fidelity: 0.011618406140179414
+TotalTime: 7.004099130630493
+AllGateCount: 1578
+CZGateCount: 760.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_31.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 35640.68727272747, 'totalPlannedIdleTimeOfCircuit': 7092048.567272766, 'totalPlannedGateFidelitiesOfCircuit': 0.7502008029967366, 'totalPlannedFidelitiesOfCircuit': 0.006180431210328718, 'totalnCZsOfCircuit': 798.0, 'CompilationTime': 8.481081485748291, 'GateCount': 1656}
+Fidelity: 0.006180431210328718
+TotalTime: 8.481081485748291
+AllGateCount: 1656
+CZGateCount: 798.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_32.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 29995.720000000292, 'totalPlannedIdleTimeOfCircuit': 5968659.7600000575, 'totalPlannedGateFidelitiesOfCircuit': 0.7684243411534598, 'totalPlannedFidelitiesOfCircuit': 0.013538656036927652, 'totalnCZsOfCircuit': 836.0, 'CompilationTime': 7.468825101852417, 'GateCount': 1734}
+Fidelity: 0.013538656036927652
+TotalTime: 7.468825101852417
+AllGateCount: 1734
+CZGateCount: 836.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_33.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 35166.97090909113, 'totalPlannedIdleTimeOfCircuit': 6997712.770909133, 'totalPlannedGateFidelitiesOfCircuit': 0.7489264813947762, 'totalPlannedFidelitiesOfCircuit': 0.00657662600109319, 'totalnCZsOfCircuit': 874.0, 'CompilationTime': 9.506581544876099, 'GateCount': 1812}
+Fidelity: 0.00657662600109319
+TotalTime: 9.506581544876099
+AllGateCount: 1812
+CZGateCount: 874.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_34.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 40354.0290909089, 'totalPlannedIdleTimeOfCircuit': 8029894.509090871, 'totalPlannedGateFidelitiesOfCircuit': 0.7203512050610349, 'totalPlannedFidelitiesOfCircuit': 0.003146141957333002, 'totalnCZsOfCircuit': 912.0, 'CompilationTime': 10.089521169662476, 'GateCount': 1890}
+Fidelity: 0.003146141957333002
+TotalTime: 10.089521169662476
+AllGateCount: 1890
+CZGateCount: 912.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_35.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 35330.30181818203, 'totalPlannedIdleTimeOfCircuit': 7030153.701818223, 'totalPlannedGateFidelitiesOfCircuit': 0.7344631674668985, 'totalPlannedFidelitiesOfCircuit': 0.0063095803979211565, 'totalnCZsOfCircuit': 950.0, 'CompilationTime': 9.590195894241333, 'GateCount': 1968}
+Fidelity: 0.0063095803979211565
+TotalTime: 9.590195894241333
+AllGateCount: 1968
+CZGateCount: 950.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_36.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 38811.17818181823, 'totalPlannedIdleTimeOfCircuit': 7722877.258181827, 'totalPlannedGateFidelitiesOfCircuit': 0.7212161886433541, 'totalPlannedFidelitiesOfCircuit': 0.0038772468480514936, 'totalnCZsOfCircuit': 988.0, 'CompilationTime': 10.350445747375488, 'GateCount': 2046}
+Fidelity: 0.0038772468480514936
+TotalTime: 10.350445747375488
+AllGateCount: 2046
+CZGateCount: 988.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_37.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 41367.90545454521, 'totalPlannedIdleTimeOfCircuit': 8231601.905454496, 'totalPlannedGateFidelitiesOfCircuit': 0.704112213627076, 'totalPlannedFidelitiesOfCircuit': 0.0026828699948389335, 'totalnCZsOfCircuit': 1026.0, 'CompilationTime': 11.342914819717407, 'GateCount': 2124}
+Fidelity: 0.0026828699948389335
+TotalTime: 11.342914819717407
+AllGateCount: 2124
+CZGateCount: 1026.0
+------------------------------------------------------------
+
+------------------------------------------------------------
+Architecture: Architecture1.json
+Circuit: qft_indep_qiskit_38.qasm
+{'nSwaps': 0.0, 'nMoves': 0.0, 'nMoveGroups': 0.0, 'totalPlannedExecutionTimeOfCircuit': 40644.78545454535, 'totalPlannedIdleTimeOfCircuit': 8087729.825454525, 'totalPlannedGateFidelitiesOfCircuit': 0.7006703311822772, 'totalPlannedFidelitiesOfCircuit': 0.002942737618685191, 'totalnCZsOfCircuit': 1064.0, 'CompilationTime': 11.725292921066284, 'GateCount': 2202}
+Fidelity: 0.002942737618685191
+TotalTime: 11.725292921066284
+AllGateCount: 2202
+CZGateCount: 1064.0
+------------------------------------------------------------
+

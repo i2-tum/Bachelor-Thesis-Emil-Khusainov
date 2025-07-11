@@ -1,1 +1,4 @@
-install into venv_DasAtom packages from requirements.txt in DasAtom folder
+Install in a new virtual environment Python 3.12 in this folder and change VENV_NAME in DasAtomRunner.py for your new environment
+
+To install dependencies in this venv:
+pip install -r requirements.txt
