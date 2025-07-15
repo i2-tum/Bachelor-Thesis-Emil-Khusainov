@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
-\chapter{Evaluation}\label{chapter:evaluation}
+\chapter{Evaluation of Framework}\label{chapter:evaluation}
 For benchmarking of discussed in \ref{chapter:compilation} compilation tool chains a python project was introduced \parencite{Emil_Khusainov_Bachelor_GIT}.
 The initial objective was to compare these three tool chains with architectures as similar as possible.
 \section{Implementation and testing nuances}
@@ -46,13 +46,13 @@ The following results were obtained \ref{fig:AllGateCountArch1},
 Nevertheless, due to very long compilation time Enola was tested separately in \ac{QFT}30 \ref{tab:EnolaDasAtomQFT30}.
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/AllGateCountArch1.png}
+    \includegraphics[width=0.7\textwidth]{figures/AllGateCountArch1.png}
     \caption[All Gate Number of first Architecture]{Number of All Gates in compiled Circuit in first architecture}
     \label{fig:AllGateCountArch1}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/CZGateCountArch1.png}
+    \includegraphics[width=0.7\textwidth]{figures/CZGateCountArch1.png}
     \caption[CZ Gate Number for first Architecture]{Number of CZ Gates in compiled Circuit in first architecture}
     \label{fig:CZGateCountArch1}
 \end{figure}
@@ -120,7 +120,7 @@ In Enola according to source codes, and it's paper following formula for fidelit
 It is a first order Taylor expansion and enough precise, but better to use an exponential variation which is used in DasAtom:
 \[e^{-t / T_2}\]
 
-In its current implementation, Enola calculates coherence fidelity with: \[\prod_{q \in Q} \left(e^{-t_q /  T_2} \right)\]
+After applying modifications, Enola calculates coherence fidelity with: \[\prod_{q \in Q} \left(e^{-t_q /  T_2} \right)\]
 
 \subsection{Investigating Different Move Idle Time for Coherence}
 During improving of Enola behavior, was noticed, that an idle time t is significantly different for Enola compared to the other two.
@@ -178,13 +178,13 @@ The following results were obtained \ref{fig:AllGateCountArch2},
 \ref{fig:CZGateCountArch2}, \ref{fig:FidelityArch2}.
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/AllGateCountArch2.png}
+    \includegraphics[width=0.7\textwidth]{figures/AllGateCountArch2.png}
     \caption[All Gate Number of second Architecture]{Number of All Gates in compiled Circuit in second architecture}
     \label{fig:AllGateCountArch2}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/CZGateCountArch2.png}
+    \includegraphics[width=0.7\textwidth]{figures/CZGateCountArch2.png}
     \caption[CZ Gate Number for first Architecture]{Number of CZ Gates in compiled Circuit in second architecture}
     \label{fig:CZGateCountArch2}
 \end{figure}

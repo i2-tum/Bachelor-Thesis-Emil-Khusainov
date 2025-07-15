@@ -49,14 +49,14 @@ describe a workflow, what tools each toolchain uses, and what is considered by c
 Nevertheless, the result of benchmarking will be evaluated in the next chapter.
 
 \subsection{HybridMapper MQT}
-HybridMapper, a tool from \ac{MQT}, stands out from the previous works, 
+\ac{HM}, a tool from \ac{MQT}, stands out from the previous works, 
 because it uses a hybrid compilation approach to map a circuit 
 and considers together SWAP gates and shuttling to explore the potential advantage of leveraging gate-based SWAP insertions 
 and shuttling-based atom rearrangements \parencite{schmid2023hybridcircuitmappingleveraging}.
 When other works individually only considered it separately \parencite{Tan_2025_Enola,huang2025dasatomdivideandshuttleatomapproach,10082942}.
 In particular, this is only a mapping and scheduling stage of computation, without synthese and optimization steps.
 The process takes a QASM circuit as input and uses only gates that defined with architecture along with their times, and fidelities.
-\ac{HybridMapper} does not optimize circuit or change something in there, it finds places where interacting conditions are violated 
+\ac{HM} does not optimize circuit or change something in there, it finds places where interacting conditions are violated 
 and solves it with logical or physical move according to internal cost function \parencite{schmid2023hybridcircuitmappingleveraging}. 
 In advance, skipping synthese step gives advantages, 
 since other considered toolsets always try to transpile input circuit into Pauli Gates and CZ gate, without consideration of possible multi-qubit CZ gates \parencite{schmid2023hybridcircuitmappingleveraging}.
