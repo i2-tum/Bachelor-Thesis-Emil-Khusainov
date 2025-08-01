@@ -1,0 +1,5 @@
+Neutral-Atom-Quantencomputer (NAQC) stellen eine neue, wachsende Architektur im Bereich der Quantenberechnungen dar. Ihre hohe Fidelity, nativen Multi-Qubit-Gates sowie die Möglichkeit, sie in dynamisch feldprogrammierbaren Qubit-Arrays (DPQA) einzusetzen, bieten ein hohes Potenzial an.
+
+Darüber hinaus erlaubt DPQA den physischen Transport von Qubits während der Ausführung von Schaltungen, anstelle oder zusätzlich zu logischen SWAP-Gates. All dies öffnet neue Kompilierungsmöglichkeiten.
+
+Daher werden neue Softwarelösungen benötigt, die die erweiterten Fähigkeiten von NAQC optimal ausnutzen. Ziel dieser Arbeit ist, bestehende Kompilierung-Toolchains zu vergleichen, die das Qubit-Shuttling berücksichtigen. Ferner werden die Lösungen an den Punkten ihrer Berechnungsdivergenzen ausgeglichen, um einen echten Vergleich der unterliegenden Algorithmen zu ermöglichen. Dieser Ansatz wird potenzielle Inkonsistenzen aufdecken, die sowohl in frühen Benchmarks als auch in den Originalpublikationen der betrachteten Compiler vorhanden sind.
